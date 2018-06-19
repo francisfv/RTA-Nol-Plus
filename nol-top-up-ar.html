@@ -113,22 +113,29 @@
           <rect class="box1" x="7" y="0" width="7" height="7"></rect>
   </svg> Nol top-up</h1>
 
-              <form class="nolCardForm" action="" method="get">
-                <div class="nolCardForm-label">
-                  <p >3 AED Nol top-up for 300 points only!</p>
-                </div>
+              <form class="nolTopUpForm" action="" method="get">
+                <h3>3 AED Nol top-up for 300 points only!</p>
 
-               
+                <fieldset class="nolTopUpForm--amount">
+                  <p>
+                    <label>Amount:</label>
+                    <select name="amount" form="" placeholder="5.00">
+                      <option value="default" selected>5.00</option>
+                    </select>
+                  </p>
+
+                  <p>
+                    <label>Points to redeem:</label>
+                    <span>3,000</span>
+                  </p>
+                </fieldset>
+                  
+
                 <ul class="cardList row">
                   <li class="cardList-card">
                     <div class="card-container">
                       <a href="#"><img class="card-image" src="img/src/cards/card-blue.png" alt="Nol Card 1 - Blue Card"></a> 
                       <p class="card-id">رقم البطاقة: <span class="text-blue">1234567890</span></p>
-                      <p class="card-option">
-                        <a href="#">حذف</a>
-                        <a href="#">تعديل</a>
-                        
-                      </p>
                     </div>
                   </li>
 
@@ -136,11 +143,6 @@
                     <div class="card-container">  
                       <a href="#"><img class="card-image" src="img/src/cards/card-silver.png" alt="Nol Card 1 - Blue Card"></a> 
                       <p class="card-id">رقم البطاقة: <span class="text-blue">1234567890</span></p>
-                      <p class="card-option">
-                        <a href="#">حذف</a>
-                        <a href="#">تعديل</a>
-                        
-                      </p>
                     </div>  
                   </li>
 
@@ -148,11 +150,6 @@
                     <div class="card-container">    
                       <a href="#"><img class="card-image" src="img/src/cards/card-silver.png" alt="Nol Card 1 - Blue Card"></a> 
                       <p class="card-id">رقم البطاقة: <span class="text-blue">1234567890</span></p>
-                      <p class="card-option">
-                        <a href="#">حذف</a>
-                        <a href="#">تعديل</a>
-                        
-                      </p>
                     </div>
                   </li>
 
@@ -160,11 +157,6 @@
                     <div class="card-container">
                         <a href="#"><img class="card-image" src="img/src/cards/card-gold.png" alt="Silver Nol Card"></a> 
                         <p class="card-id">رقم البطاقة: <span class="text-blue">1234567890</span></p>                      
-                      <p class="card-option">
-                        
-                        <a href="#">حذف</a>
-                        <a href="#">تعديل</a>
-                      </p>
                     </div>
                   </li>
                 </ul>
