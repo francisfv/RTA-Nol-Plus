@@ -1,0 +1,13 @@
+html[class*="ie10"] body, html[class*="ie11"] body {
+	background-color: yellow !important;
+}
+html[class*="ie10"] .ie-valign-table, html[class*="ie11"] .ie-valign-table {
+	display: table !important;
+	width: 100% !important;
+}
+
+html[class*="ie10"] .ie-valign-cell, html[class*="ie11"] .ie-valign-cell {
+	display: cell !important;
+	vertical-align: middle;
+	width: 15%;
+}
