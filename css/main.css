@@ -2160,11 +2160,11 @@ html[dir="rtl"].grid-aside-template .main-content {
    Tell Us About Yourself styles
    ===================================== */
 .tell-us-about-yourself-page .wrapper-main {
-  background-color: #ffd65e;
+  background-color: #01ffe3;
 }
 
 
-.tell-us-about-yourself-page .main-content__primary h3 {
+.tell-us-about-yourself-page .main-content__primary h4 {
   margin-bottom: 2rem;
 }
 
@@ -2263,7 +2263,7 @@ html[dir="rtl"].grid-aside-template .main-content {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 3;
   margin: auto;
-  /*display: none;*/
+  display: none;
 }  
 
 .nol-pop-up p, .nol-pop-up a {
@@ -2288,9 +2288,31 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 
 .nolTopUpForm--amount > p  {
-  width: 40%;
+  width: 35%;
   float: right;
+  vertical-align: middle;
+  height: 2.3rem;
+  line-height: 2.3rem;
 }
+
+.dropdown-wrapper {
+  display: inline-block;
+  position: relative;
+  border: 1px solid red;
+}
+
+.dropdown-wrapper select {
+  width: 150px;
+  display: inline-block;
+}
+
+.dropdown-wrapper .dropdown-tip {
+  position: absolute;
+  display: block;
+  width: 10em;
+  top: 35px;
+}
+
 
 
 .nol-top-up-page .wrapper-main {
@@ -2487,6 +2509,10 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .text-blue {
   color: #0300a5;
+}
+
+.text-purple {
+  color: #bb00be;
 }
 /*
  * Hide only visually, but have it available for screen readers:

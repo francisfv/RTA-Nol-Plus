@@ -116,15 +116,18 @@
               <form class="nolTopUpForm" action="" method="get">
                 <h3>3 AED Nol top-up for 300 points only!</p>
 
-                <fieldset class="nolTopUpForm--amount">
-                  <p>
+                <fieldset class="nolTopUpForm--amount clearfix">
+                  <p style="border: 1px dotted green;">
                     <label>Amount:</label>
-                    <select name="amount" form="" placeholder="5.00">
-                      <option value="default" selected>5.00</option>
-                    </select>
+                    <span class="dropdown-wrapper">
+                      <select class="select" name="amount" form="" placeholder="5.00">
+                        <option value="default" selected>5.00</option>
+                      </select>
+                      <small class="dropdown-tip">Minimum of AED 5</small>
+                    </span>
                   </p>
 
-                  <p>
+                  <p style="border: 1px dotted green;">
                     <label>Points to redeem:</label>
                     <span>3,000</span>
                   </p>
@@ -160,6 +163,14 @@
                     </div>
                   </li>
                 </ul>
+
+                <fieldset class="nolTopUpForm--amount">
+                  <p>
+                    <label>Top-up another Nol Card</label>
+                    <input id="nol-card-number" class="nolForm-field nol-card-number" type="text" name="nol-card-number" required placeholder="رقم البطاقة">
+                  </p>
+                 
+                </fieldset>
 
               <p>Note: All metro gates and parking meters may take up to 48 hours to receive your top up request made through Online services. Any subsequent use of your NOL card on these devices will top up your card.</p>  
               <button class="nolCardForm-submit cta-btn" name="confirm-nol" onclick="popUp()">تأكيد</button>
