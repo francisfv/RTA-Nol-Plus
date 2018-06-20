@@ -2144,14 +2144,11 @@ html[dir="rtl"].grid-aside-template .main-content {
   margin-bottom: 2em;
 }
 @media (min-width: 1040px) {
-  .link-nol-card-page .nolCardForm-submit-container > div {
-  width: 70%;
-  float: right;
-  }
 
   .link-nol-card-page .nolCardForm-submit-container > .nolCardForm-submit {
     width: 30%;
-    float: left;
+    display: block;
+    margin: 1em auto;
   }
 }
 
