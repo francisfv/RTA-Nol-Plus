@@ -1869,10 +1869,35 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .grid-aside-template .main-content__aside {
   height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
-.grid-aside-template .main-content__aside .row {
+.col-content {
+  position: relative;
+}
 
+
+
+.col-content--inner-wrap {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px 4em 30px rgba(0,0,0,0.5);
+          box-shadow: inset 0px 4em 30px rgba(0,0,0,0.5);
+}
+
+
+.col-content .cta-btn {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
 }
 
 .grid-1-3 .main-content__aside .col {
@@ -1985,6 +2010,16 @@ html[dir="rtl"].grid-aside-template .main-content {
      overflow-y: auto;
   }
 
+  .grid-aside-template.grid-3-3 .main-content__primary {
+     -webkit-box-flex: 0;
+     -webkit-flex: 0 0 400px;
+         -ms-flex: 0 0 400px;
+             flex: 0 0 400px;
+     padding: 3.2rem 2rem 0 0;
+     overflow-x: hidden;
+     overflow-y: auto;
+  }
+
   .grid-aside-template-bisected  .main-content__primary {
      -webkit-box-flex: 0;
      -webkit-flex: 0 0 80%;
@@ -1996,6 +2031,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   }
 
 
+ 
 
   .grid-aside-template .main-content__aside {
      -webkit-box-flex: 0;
@@ -2016,6 +2052,27 @@ html[dir="rtl"].grid-aside-template .main-content {
         -ms-flex-align: center;
             align-items: center;
             min-width: 195px;
+  }
+
+  .grid-aside-template.grid-3-3 .main-content__aside {
+     -webkit-box-flex: 0;
+     -webkit-flex: 0 0 585px;
+         -ms-flex: 0 0 585px;
+             flex: 0 0 585px;
+     -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+            min-width: 585px;
   }
 
   .grid-1-2 .main-content__aside .col:nth-child(1),
@@ -2040,6 +2097,14 @@ html[dir="rtl"].grid-aside-template .main-content {
     -webkit-flex: 0 0 100%;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+
+  }
+
+  .grid-aside-template.grid-3-3 .main-content__aside .col{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 195px;
+        -ms-flex: 0 0 195px;
+            flex: 0 0 195px;
 
   }
 
@@ -2094,7 +2159,7 @@ html[dir="rtl"].grid-aside-template .main-content {
    Manage Nol Card page styles
    ===================================== */
 .manage-nol-card-page .wrapper-main {
-  background-color: #ffd65e;
+  background-color: #00ffe2;
 }
 
 .manage-nol-card-page .main-content__primary, .manage-nol-card-page .main-content__aside {
@@ -2292,37 +2357,62 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 
+.nolTopUpForm--amount {
+  flex-flow: row wrap;
+}
+
+.nolTopUpForm--amount > * {
+  flex: 0 0 100%;
+}
+
 .nolTopUpForm--amount > p  {
-  width: 35%;
-  float: right;
-  vertical-align: middle;
-  height: 2.3rem;
   line-height: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.nolTopUpForm--amount > p > label {
+  flex: 1 1 25%;
+  border: 1px dotted blue;
+}
+
+.nolTopUpForm--amount > p > span {
+  flex: 1 1 75%;
+  border: 1px dotted blue;
 }
 
 .dropdown-wrapper {
-  display: inline-block;
   position: relative;
-  border: 1px solid red;
 }
 
 .dropdown-wrapper select {
-  width: 150px;
-  display: inline-block;
+  width: 100%;
 }
 
 .dropdown-wrapper .dropdown-tip {
   position: absolute;
   display: block;
-  width: 10em;
-  top: 35px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  border: 1px solid green;
 }
-
 
 
 .nol-top-up-page .wrapper-main {
   background-color: #ffd65e;
 }   
+
+.nol-top-up-page .main-content h5 {
+  font-size: 100%;
+  margin-bottom: .7em;
+  font-weight: bold;
+}
+
+.nol-top-up-page .cardList .card-container {
+  width: auto;
+  border: 1px solid green;
+}
 
 .nol-top-up-page .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/nol-top-up/img1.jpg');
@@ -2339,6 +2429,60 @@ html[dir="rtl"].grid-aside-template .main-content {
   .nol-top-up-page .main-content__aside .col:nth-child(1) {
     background-position: 70%;
   }
+}
+
+/* =====================================
+   Redeem points page styles
+   ===================================== */
+.redeem-points-page .wrapper-main {
+  background-color: #ffd65e;
+}
+
+.redeem-points-page .main-content__aside .col {
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(1) {
+  background-image: url('../img/src/redeem-points/aside-img1.jpg');
+  background-size: cover;  
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(2) {
+  background-color: #44ffe2;
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(3) {
+  background-image: url('../img/src/redeem-points/aside-img2.jpg');
+  background-size: cover;  
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(4) {
+  background-image: url('../img/src/redeem-points/aside-img3.jpg');
+  background-size: cover;  
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(5) {
+  background-image: url('../img/src/redeem-points/aside-img4.jpg');
+  background-size: cover;  
+  background-position: 50%;
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(6) {
+  background-image: url('../img/src/redeem-points/aside-img5.jpg');
+  background-size: cover;  
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(7) {
+  background-image: url('../img/src/redeem-points/aside-img6.jpg');
+  background-size: cover;  
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(8) {
+  background-color: #ed728e;
+}
+
+.redeem-points-page .main-content__aside .col:nth-child(9) {
+  background-image: url('../img/src/redeem-points/aside-img7.jpg');
+  background-size: cover;  
 }
 
 /* =====================================
@@ -2518,6 +2662,10 @@ html[dir="rtl"].grid-aside-template .main-content {
     display: none !important;
 }
 
+.text-white {
+  color: #fff;
+}
+
 .text-blue {
   color: #0300a5;
 }
@@ -2623,14 +2771,14 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 select {
   width: 40%;
-  padding: 5px 35px 5px 5px;
+  padding: 5px 40px 5px 5px;
   font-size: 1rem;
   border: 0;
   height: 34px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url('../img/src/arrow-14.png') 96% / 5% no-repeat #fff;
+  background: url('../img/src/arrow-14.png') 96% / 10px no-repeat #fff;
 }
 
 

@@ -114,27 +114,33 @@
   </svg> Nol top-up</h1>
 
               <form class="nolTopUpForm" action="" method="get">
-                <h3>3 AED Nol top-up for 300 points only!</p>
+                <h5>3 AED Nol top-up for 300 points only!</h5>
 
-                <fieldset class="nolTopUpForm--amount clearfix">
-                  <p style="border: 1px dotted green;">
+                <fieldset class="nolTopUpForm--amount row">
+                  <p class="row" style="border: 1px dotted green;">
                     <label>Amount:</label>
                     <span class="dropdown-wrapper">
                       <select class="select" name="amount" form="" placeholder="5.00">
                         <option value="default" selected>5.00</option>
+                        <option value="" selected>10.00</option>
+                        <option value="" selected>15.00</option>
+                        <option value="" selected>20.00</option>
+                        <option value="" selected>25.00</option>
+                        <option value="" selected>30.00</option>
+                        <option value="" selected>35.00</option>
                       </select>
-                      <small class="dropdown-tip">Minimum of AED 5</small>
+                      <small class="dropdown-tip text-blue">Minimum of AED 5</small>
                     </span>
                   </p>
 
-                  <p style="border: 1px dotted green;">
+                  <p class="row" style="border: 1px dotted green;">
                     <label>Points to redeem:</label>
                     <span>3,000</span>
                   </p>
                 </fieldset>
                   
-
-                <ul class="cardList row">
+                <h5 style="border: 1px dotted green;">Top up my Nol Card</h5>
+                <ul class="cardList row" style="border: 1px dotted green;">
                   <li class="cardList-card">
                     <div class="card-container">
                       <a href="#"><img class="card-image" src="img/src/cards/card-blue.png" alt="Nol Card 1 - Blue Card"></a> 
@@ -164,15 +170,15 @@
                   </li>
                 </ul>
 
-                <fieldset class="nolTopUpForm--amount">
-                  <p>
+               <!--  <fieldset class="clearfix" style="border: 1px dotted green;">
+                  <p class="row">
                     <label>Top-up another Nol Card</label>
                     <input id="nol-card-number" class="nolForm-field nol-card-number" type="text" name="nol-card-number" required placeholder="رقم البطاقة">
                   </p>
                  
-                </fieldset>
+                </fieldset> -->
 
-              <p class="errorMessage">Note: All metro gates and parking meters may take up to 48 hours to receive your top up request made through Online services. Any subsequent use of your NOL card on these devices will top up your card.</p>  
+              <p class="errorMessage" style="border: 1px dotted green;">Note: All metro gates and parking meters may take up to 48 hours to receive your top up request made through Online services. Any subsequent use of your NOL card on these devices will top up your card.</p>  
               <button class="nolCardForm-submit cta-btn" name="confirm-nol" onclick="popUp()">تأكيد</button>
             </form>
           </section><!-- .main-content__profile-details -->
