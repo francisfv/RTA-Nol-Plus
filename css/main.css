@@ -323,7 +323,7 @@ input[type="text"], input[type="button"], select {
   margin-bottom: 1.5rem;
 }
 .nolForm-inputSet {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -454,6 +454,14 @@ input[type="text"]:required {
     -webkit-box-shadow: none;
             box-shadow: none;
      outline: none;
+}
+
+
+/* Error box */
+.errorMessage {
+  color: #ff0000;
+  text-align: right;
+  margin: 1em 0;  
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -2325,6 +2333,12 @@ html[dir="rtl"].grid-aside-template .main-content {
 .nol-top-up-page .main-content__aside .col:nth-child(2) {
   background-image: url('../img/src/nol-top-up/img2.jpg');
   background-size: cover;
+}
+
+@media (min-width: 1040px) {
+  .nol-top-up-page .main-content__aside .col:nth-child(1) {
+    background-position: 70%;
+  }
 }
 
 /* =====================================
