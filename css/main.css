@@ -2551,9 +2551,10 @@ html[dir="rtl"].grid-aside-template .main-content {
   font-size: 120%;
 }
 
-.redeem-points-page .main-content__aside .col {
+/*.redeem-points-page .main-content__aside  {
+  flex-flow: row wrap;
 }
-
+*/
 .redeem-points-page .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/redeem-points/aside-img1.jpg');
   background-size: cover;  
