@@ -433,7 +433,7 @@ html[dir="ltr"] .main-content__title .plus-icon {
   display: inline-block;
   width: 100%;
   border: 0;
-  padding: .65em 1em;
+  padding: .6em 1em;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -460,7 +460,8 @@ input[type="text"]:required {
 .errorMessage {
   color: #ff0000;
   text-align: right;
-  margin: 1em 0;  
+  margin: 1.5em 0 .5em 0;  
+  min-height: 3em;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -1905,12 +1906,6 @@ html[dir="rtl"].grid-aside-template .main-content {
           box-shadow: inset 0px 4em 30px rgba(0,0,0,0.5);
 }
 
-.col-content h5 {
-  text-align: center;
-  font-size: 100%;
-  margin: .5em 0;
-}
-
 .col-content .cta-btn {
   width: 90%;
   margin: 0 auto;
@@ -2267,10 +2262,11 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .aboutYourselfForm .row li{
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 27%;
-      -ms-flex: 0 0 27%;
-          flex: 0 0 27%;
-  margin: .2em 0;
+  -webkit-flex: 0 0 33.3%;
+      -ms-flex: 0 0 33.3%;
+          flex: 0 0 33.3%;
+  margin: .4em 0;
+  font-size: 90%;
 }
 
 .aboutYourselfForm fieldset {
@@ -2346,7 +2342,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   overflow-x: hidden;
   overflow-y: auto;
   top: 0; left: 0; bottom: 0; right: 0;
-  padding: 2em;
+  padding: 3em;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 3;
@@ -2504,7 +2500,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   
   .nolTopUpForm--cta {
     max-width: 25%;
-    float: right;
+    
     margin: 1em 0;
   }
 
@@ -2530,6 +2526,29 @@ html[dir="rtl"].grid-aside-template .main-content {
    ===================================== */
 .redeem-points-page .wrapper-main {
   background-color: #ffd65e;
+}
+
+.redeem-points-page .col-content h5 {
+  font-size: 140% !important;
+  text-align: center;
+  margin: .9em 0;
+}
+
+.redeem-points-page .col-content .cta-btn {
+  position: absolute;
+  bottom:7%;
+  left: 0;
+  right: 0;
+}
+
+
+.redeem-points-page .main-content__primary .member-name {
+  font-size: 200%;
+  margin: 1.5em 0 .5em 0;
+}
+
+.redeem-points-page .main-content__primary .member-points {
+  font-size: 120%;
 }
 
 .redeem-points-page .main-content__aside .col {
@@ -2579,6 +2598,12 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-size: cover;  
 }
 
+
+@media (min-width: 1040px) {
+  .redeem-points-page .col-content .cta-btn {
+    max-width: 70%;
+  }
+}
 /* =====================================
    Footer styles
    ===================================== */
