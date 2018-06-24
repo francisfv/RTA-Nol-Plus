@@ -130,3 +130,10 @@ function popUp() {
         x.style.display = "none";
     }
 } 
+
+$( "#accordion" ).accordion({
+  heightStyle: "content",
+  active:false,
+  collapsible: true,
+  header:"div.accordianheader"
+});
