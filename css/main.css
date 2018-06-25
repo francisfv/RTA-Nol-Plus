@@ -2620,6 +2620,72 @@ html[dir="rtl"].grid-aside-template .main-content {
   }
 }
 
+/* =====================================
+   Statement styles
+   ===================================== */
+.statement-page .wrapper-main {
+  background-color: #44ffe2;
+}
+
+.statement-page .main-content__aside .col:nth-child(1) {
+  background-image: url('../img/src/statement/aside-img1.jpg');
+  background-size: cover;  
+}
+
+.statement-page .main-content__aside .col:nth-child(2) {
+  background-image: url('../img/src/statement/aside-img2.jpg');
+  background-size: cover;  
+}
+
+.statement-page .main-content__primary .member-name {
+  font-size: 200%;
+  margin: 1.5em 0 .5em 0;
+}
+
+.statement-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: transparent;
+  width: 100%;
+}
+.statement-table > thead {
+  background-color: #000f9e;
+  color: #fff;
+
+}
+
+.statement-table tbody:before {
+    line-height:1em;
+    content:"\00a0";
+    color:transparent; /* bacground color */
+    display:block;
+}
+
+.statement-table th {
+  font-weight: normal;
+  vertical-align: middle;
+  text-align: right;
+  line-height: 1.5;
+  font-size: 90%;
+}
+
+.statement-table th, .statement-table tr td {
+  padding: .4em .5em;
+}
+
+@media only screen and (max-width: 568px) {
+  .statement-table tbody tr {
+    background-color: #fff;
+    border-bottom: 3px solid #44ffe2;
+  }
+}
+
+@media (min-width: 1040px) {
+  .statement-page .main-content__aside .col:nth-child(1) {
+    background-position: center;
+  }
+}
+
 
 /* =====================================
    Contact Us styles
@@ -3137,14 +3203,13 @@ i {
      display: inline-block;
      margin-right: 2%;
     -webkit-transition:all 300ms ease-in 0s;
-    -moz-transition: all 300ms ease-in 0s;
     -o-transition: all 300ms ease-in 0s;
   transition: all 300ms ease-in 0s;}
 
 .ui-state-active i {
     -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
+
