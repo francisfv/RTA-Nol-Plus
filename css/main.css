@@ -2837,6 +2837,127 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 /* =====================================
+   Static Offer page styles
+   ===================================== */
+.offers-static-page .wrapper-main {
+  background-color: #fff;
+}
+
+.offers-static-page .member-details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.offers-static-page .member-details__member-name, 
+.offers-static-page .member-details__member-points {
+  flex: 1 1 100%;
+  line-height: 3rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+
+.offers-static-page .offer-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+
+}
+
+.offers-static-page .offer {
+  max-width: 275px;
+  max-height: 550px;
+  overflow: hidden;
+  margin: 0 auto 1em auto;
+}
+
+.offers-static-page .offer:nth-child(1n) {
+  background-color: #fed65c;
+}
+
+.offers-static-page .offer:nth-child(2n) {
+  background-color: #ec718e;
+}
+
+.offers-static-page .offer:nth-child(3n) {
+  background-color: #458eff;
+}
+
+.offers-static-page .offer-image {
+  display: block;
+}
+
+.offers-static-page .offer-details {
+  max-height: 15em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1em 1.5em 0 1.5em;
+}
+
+.offers-static-page .offer-details h4 {
+  font-size: 120%;
+  margin-bottom: 1em;
+}
+
+.offers-static-page .offer-details > div {
+  margin-bottom: 1.25em;
+}
+
+@media (min-width: 750px) {
+  .offers-static-page .member-details__member-name, 
+  .offers-static-page .member-details__member-points {
+    flex: 1 1 50%;
+  }
+
+  .offers-static-page .member-details__member-name {
+    text-align: right;
+  }
+
+  .offers-static-page .member-details__member-points {
+    text-align: left;
+  }
+
+  .offers-static-page .offer {
+    max-width: 100%;
+    max-height: 275px;
+    width: 100%;
+  }
+  .offers-static-page .offer-details h4 {
+    font-size: 150%;
+    margin-bottom: .5em;
+  }
+
+  .offers-static-page .offer-image {
+    float: right;
+  }
+  .offers-static-page .offer-details {
+    max-height: 275px;
+    padding: 2em 2em 0 2em;
+  }  
+
+}
+
+
+/* =====================================
    Terms & Condition styles
    ===================================== */
 .terms-page .wrapper-main {
@@ -3211,5 +3332,4 @@ i {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-
 
