@@ -82,7 +82,7 @@ body {
    ===================================== */
 a {
   text-decoration: underline;
-  color: #cc386b;   
+  color: #323235;   
 }
 
 a, p, h6, dl, dt, dd {
@@ -324,6 +324,19 @@ input[type="text"], input[type="button"], select {
   line-height: 1.2;
   margin-bottom: 2rem;
   font-weight: normal;
+}
+
+.main-content__description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+
+@media (min-width: 1040px) {
+  .main-content__description {
+    margin-left: 4em;
+  }
 }
 
 
@@ -2736,6 +2749,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   -webkit-flex: 1 0 100%;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
+
 }
 
 .contact-form .info-block > label + * {
@@ -2745,6 +2759,10 @@ html[dir="rtl"].grid-aside-template .main-content {
           flex: 1 0 100%;
   min-height: 2.3em;
   padding: 0;
+}
+
+.contact-form .info-block > label + input {
+  padding: .5em 1em;
 }
 
 .contact-form .info-block:last-child > label + * {
@@ -2794,7 +2812,7 @@ html[dir="rtl"].grid-aside-template .main-content {
     -webkit-flex: 1 0 20%;
         -ms-flex: 1 0 20%;
             flex: 1 0 20%;
-    max-width: 8em;
+    max-width: 7.3em;
     vertical-align: middle;
     line-height: 2.3em;
     height: 2.3em;
@@ -2802,10 +2820,10 @@ html[dir="rtl"].grid-aside-template .main-content {
 
   .contact-form .info-block > label + * {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 50%;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
-    max-width: 60%;
+    -webkit-flex: 1 0 40%;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%;
+    min-width: 40%;
     text-align: center;
   }
 
@@ -2819,7 +2837,7 @@ html[dir="rtl"].grid-aside-template .main-content {
     -webkit-flex: 1 0 20%;
         -ms-flex: 1 0 20%;
             flex: 1 0 20%;
-    max-width: 8em;
+    max-width: 7.3em;
     vertical-align: middle;
     line-height: 2.3em;
     height: 2.3em;
@@ -3208,6 +3226,10 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .text-red {
   color: #ff0000;
+}
+
+.dir-ltr {
+
 }
 
 /*
