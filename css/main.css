@@ -523,7 +523,7 @@ input[type="text"]:required {
 
 .card-container {
  margin: 0 auto;
- max-width: 100px;
+ max-width: 150px;
 }
 
 .card-container > * {
@@ -549,9 +549,14 @@ input[type="text"]:required {
                     box-shadow: 0 0 12px rgba(255,0,0,1); 
 
 }
-.card-label, .card-id {
+.card-label, .card-id, .card-expiry {
   font-size: 85%;
 }
+
+.card-expiry {
+  font-size: 70%;
+}
+
 
 .card-option a {
   text-decoration: none;
@@ -2046,7 +2051,7 @@ html[dir="rtl"].grid-aside-template .main-content {
      -webkit-box-flex: 0;
      -webkit-flex: 0 0 75%;
          -ms-flex: 0 0 75%;
-             flex: 0 0 75%;
+             flex: 0 0 80%;
      padding: 3.2rem 2rem 0 0;
      overflow-x: hidden;
      overflow-y: auto;
@@ -3008,7 +3013,7 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 
 /* =====================================
-   Terms & Condition styles
+   Terms & Condition + Privacy Policy styles
    ===================================== */
 .terms-page .wrapper-main {
   background-color: #fff;
@@ -3030,6 +3035,8 @@ html[dir="rtl"].grid-aside-template .main-content {
 .terms-list li {
   margin-bottom: .5em;
 }
+
+
 
 /* =====================================
    Footer styles
