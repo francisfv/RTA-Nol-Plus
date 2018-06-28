@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tell Us About Yourself | RTA Nol Plus</title>
+  <title>Update Your Preference | RTA Nol Plus</title>
   <meta name="description" content="RTA Nol Plus Program">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,7 +12,8 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  
+  <link rel="stylesheet" href="css/vendor/datepicker.css">
+
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
@@ -90,15 +91,81 @@
 
           <section class="main-content__primary">
 
-  <h1 class="main-content__title main-content__title--with-icon text-purple"><svg class="plus-icon plus-icon-blue" width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <h1 class="main-content__title main-content__title--with-icon text-blue"><svg class="plus-icon plus-icon-blue" width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect class="box3" x="7" y="14" width="7" height="7"></rect>
           <rect class="box2" x="0" y="7" width="7" height="7"></rect>
           <rect class="box1" x="7" y="0" width="7" height="7"></rect>
-  </svg>أخبرنا عن نفسك</h1>
+  </svg>تحديث التفضيلات </h1>
 
-              <h4>نود أن نتعرف عليك أكثر</h4>
 
               <form class="aboutYourselfForm" action="" method="get">
+
+                <fieldset class="personalDetails clearfix">
+                  <legend class="text-blue">المعلومات الشخصية</legend>
+
+                  <p class="personalDetails--input clearfix">
+                    <input id="nolForm-bday" class="nolForm-field form-datepicker nolForm-bday" type="text" name="birthday" required placeholder="تاريخ الميلاد"><select name="emirates" form="" placeholder="Emirates">
+                      <option value="default" disabled selected hidden>الإمارة</option>
+                      <option value="Dubai">دبي</option>
+                      <option value="Abu Dhabi">أبو ظبي</option>
+                      <option value="Al Ain">العين</option>
+                      <option value="Ajman">عجمان</option>
+                      <option value="Sharjah">الشارقة</option>
+                      <option value="Fujairah">الفجيرة</option>
+                      <option value="Ras Al Khaimah">رأس الخيمة</option>
+                      <option value="Umm Al Quwain">ام القوين</option>
+                    </select><select name="area" form="" placeholder="Emirates">
+                      <option value="" disabled selected hidden>المنطقة</option>
+                      <option value="">منطقة 1</option>
+                      <option value="">منطقة 2</option>
+                      <option value="">منطقة 3</option>
+                      <option value="">منطقة 4</option>
+                      <option value="">منطقة 5</option>
+                      <option value="">منطقة 6</option>
+                      <option value="">منطقة 7</option>
+                    </select>                      
+                  </p>
+                  <p class="nolCardForm-checkbox">
+                  <input type="checkbox" id="receive-offers" name="receive-offers" value="1">
+                  <label for="receive-offers"> أود تلقي عروض نول بلاس ومزايا البرنامج عبر البريد الإلكتروني والرسائل القصيرة</label>
+                </p>
+                </fieldset>
+
+               
+                
+
+                <fieldset>
+                  <legend class="text-blue">جنس</legend>
+                    <ul class="row"> 
+                      <li>
+                        <input type="checkbox" name="" value="0">
+                        <label for="">ذكر</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" name="" value="0">
+                        <label for="">أنثى</label>
+                      </li>
+
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                  <legend class="text-blue">اللغة المفضلة في عمليات التراسل</legend>
+                    <ul class="row"> 
+                      <li>
+                        <input type="checkbox" name="" value="0">
+                        <label for="">العربية</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" name="" value="0">
+                        <label for="">الانجليزية</label>
+                      </li>
+
+                    </ul>
+                </fieldset>
+
                 <fieldset>
                   <legend class="text-blue">ما هي نوعية العروض التي تهتم بها؟</legend>
                     <ul class="row"> 
@@ -268,38 +335,10 @@
                     </ul>
                 </fieldset>
 
-                <fieldset>
-                  <legend class="text-blue">جنس</legend>
-                    <ul class="row"> 
-                      <li>
-                        <input type="checkbox" name="" value="0">
-                        <label for="">ذكر</label>
-                      </li>
-
-                      <li>
-                        <input type="checkbox" name="" value="0">
-                        <label for="">أنثى</label>
-                      </li>
-
-                    </ul>
-                </fieldset>
-
-                <fieldset>
-                  <legend class="text-blue">اللغة المفضلة في عمليات التراسل</legend>
-                    <ul class="row"> 
-                      <li>
-                        <input type="checkbox" name="" value="0">
-                        <label for="">العربية</label>
-                      </li>
-
-                      <li>
-                        <input type="checkbox" name="" value="0">
-                        <label for="">الانجليزية</label>
-                      </li>
-
-                    </ul>
-                </fieldset>
-
+                <p class="errorMessage">
+                  ERROR HANDLER
+                </p>
+ 
                 <div class="aboutYourselfForm-buttonset row">
                   <button class="aboutYourselfForm-submit cta-btn" name="">إرسال</button>
                   <button class="aboutYourselfForm-skip cta-btn" name="">تجاوز</button>
@@ -357,9 +396,17 @@
   
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
   <script src="js/vendor/jquery.responsive-dom.min.js"></script> 
   <script src="js/vendor/siema.min.js"></script> 
+  <!-- <script src="js/vendor/datepicker.min.js"></script>  -->
   <script src="js/main.js"></script>
+  <script>
+    
+  $(function(){
+      $( "#nolForm-bday" ).datepicker();
+   });
+  </script>
 </body>
 
 </html>
