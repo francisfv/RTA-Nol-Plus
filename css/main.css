@@ -499,6 +499,27 @@ input[type="text"]:required {
   cursor: default;
 }
 
+.pop-up-inner {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.pop-up-close {
+  position: absolute;
+  right: 0;
+  height: 2.2rem;
+  width: 2.2rem;
+  line-height: 2.2rem;
+  margin: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  padding: .2rem;
+  background-color: #000f9e;
+}
+
 
 /* Error box */
 .errorMessage {
@@ -1710,9 +1731,13 @@ input[type="text"]:required {
 
 
 .profile-page .main-content__profile-details__name {
-  font-size: 1.4rem;
+  font-size: 150%;
   font-weight: normal;
   margin-bottom: 1rem;
+}
+
+.profile-page .main-content__profile-details-value.member-details__member-points {
+  font-weight: bold;
 }
 
 
@@ -1821,7 +1846,6 @@ input[type="text"]:required {
   }
   
   .profile-page .main-content__profile-details__name {
-    font-size: 2rem;
     font-weight: normal;
     margin-bottom: .5rem;
   }
@@ -2693,18 +2717,47 @@ html[dir="rtl"].grid-aside-template .main-content {
   position: fixed;
   background-color: #fff;
   width: 100%;
-  max-width: 30rem;
-  max-height: 20.5rem;
+  max-width: 40rem;
+  max-height: 30rem;
   overflow-x: hidden;
   overflow-y: auto;
   top: 25%; left: 0; bottom: 0; right: 0;
-  padding: 2em;
+  padding: .5em 1em;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 3;
   margin: 10rem auto;
   display: block;
-}  
+} 
+
+.statement-pop-up .transaction-table-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.statement-pop-up .transaction-table {
+  display: table;
+  border: 1px solid red;
+  flex: 0 0 100%;
+  margin: .5rem 0;
+} 
+
+.statement-pop-up .transaction-table-header {
+  margin-top: 3rem;
+}
+
+
+
+.statement-pop-up .transaction-table > div {
+  display: table-row;
+}
+
+.statement-pop-up .transaction-table > div > div {
+  display: table-cell;
+  border: 1px solid blue;
+  padding: .3rem .5rem;
+}
 
 
 
@@ -2733,6 +2786,11 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #000f9e;
   color: #fff;
 
+}
+
+.statement-table tbody tr:hover {
+      -webkit-box-shadow: inset 0px 0px 0px 4px #000f9e;  
+          box-shadow: inset 0px 0px 0px 4px #000f9e;
 }
 
 .statement-table tbody:before {
@@ -2767,6 +2825,11 @@ html[dir="rtl"].grid-aside-template .main-content {
     background-color: #fff;
     border-bottom: 3px solid #44ffe2;
   }
+
+  .statement-pop-up .transaction-table {
+    flex: 0 0 50%;
+    margin: .5rem 0;
+  } 
 }
 
 @media (min-width: 1040px) {
@@ -2776,6 +2839,11 @@ html[dir="rtl"].grid-aside-template .main-content {
   }
   .statement-page .main-content__aside .col:nth-child(1) {
     background-position: center;
+  }
+
+  .statement-table tbody tr:hover {
+      -webkit-box-shadow: inset 0px 0px 0px 2px #000f9e;  
+          box-shadow: inset 0px 0px 0px 2px #000f9e;
   }
 }
 
@@ -2982,6 +3050,18 @@ html[dir="rtl"].grid-aside-template .main-content {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.offers-static-page .member-details__member-points {
+  font-weight: bold;
+}
+
+.offers-static-page .member-details__member-points .points {
+  font-size: 120%;
+}
+
+.offers-static-page .member-details__member-name {
+  font-size: 150%;
 }
 
 

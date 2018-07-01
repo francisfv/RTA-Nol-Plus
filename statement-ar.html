@@ -92,11 +92,43 @@
 
         <main class="main-content">
           <div id="pop-up-window" class="statement-pop-up">
-            <h6>Transaction details</h6>
-            <p> لقد استبدلت نقاطك بنجاح مقابل إعادة تعبئة نول بقيمة 5 درهم.</p>         
-            <a href="#" onclick="popUp()">العودة</a>
+            
+            <div class="pop-up-inner clearfix">
+              <a href="#" class="pop-up-close" onclick="popUp()">X</a>
+              <h6 class="transaction-table-header">Transaction details</h6>
+
+
+              <div class="transaction-table-wrapper">
+                <div class="transaction-table">
+                    <div>
+                      <div><strong>Transaction number:</strong>&nbsp;<span>10920</span></div>
+                    </div>
+
+                    <div>
+                      <div><strong>Date:</strong>&nbsp;<span>03/09/2018</span></div>
+                    </div>
+
+                    <div>
+                      <div><strong>Earned/Redeemed at:</strong>&nbsp;<span>Dubai Metro</span></div>
+                    </div>
+                </div>
+
+                <div class="transaction-table">
+                    <div>
+                      <div><strong>Identifier:</strong>&nbsp;<span>10920</span></div>
+                    </div>
+
+                    <div>
+                      <div><strong>Transaction value:</strong>&nbsp;<span>03/09/2018</span></div>
+                    </div>
+
+                    <div>
+                      <div><strong>Transaction type:</strong>&nbsp;<span>Dubai Metro</span></div>
+                    </div>
+                </div>
+              </div>  
+            </div>
           </div>
-          
 
 
           
@@ -122,7 +154,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                   <tr><td><a href="#" onclick="popUp()">September</a></td><td><a href="#">03/09/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">Earn</a></td><td><a href="#">1000</a></td></tr>
+                   <tr><td><a href="#">September</a></td><td><a href="#">03/09/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">Earn</a></td><td><a href="#">1000</a></td></tr>
                    <tr><td><a href="#">August</a></td><td><a href="#">15/08/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Redeem</a></td><td><a href="#">800</a></td></tr>
                    <tr><td><a href="#">July</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">Earn</a></td><td><a href="#">20000</a></td></tr>
                    <tr><td><a href="#">July</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
@@ -199,7 +231,7 @@
 
     $('.statement-table').basictable();
 
-    $('.statement-table tr').click(function() {
+    $('.statement-table tbody tr').click(function() {
             var popUpWindow = document.getElementById("pop-up-window");
     var popUpBackdrop = document.getElementById("pop-up-backdrop");
 

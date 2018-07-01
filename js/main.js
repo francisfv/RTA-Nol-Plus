@@ -145,7 +145,7 @@ $( "#accordion" ).accordion({
 
 // Statement detail pop-up
 
-$('statement-table a').click(function() {
+$('statement-table').click(function() {
     var x = document.getElementById("statement-pop-up");
     if (x.style.display === "none") {
         x.style.display = "block";
