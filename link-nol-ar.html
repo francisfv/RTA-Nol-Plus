@@ -89,6 +89,20 @@
         
         <main class="main-content">
 
+          <div id="nol-pop-up" class="nol-pop-up">
+            <p> لقد استبدلت نقاطك بنجاح مقابل إعادة تعبئة نول بقيمة 5 درهم.</p>
+            <div>
+              <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <circle id="Oval" stroke="#FFFFFF" stroke-width="8" cx="50" cy="50" r="46"></circle>
+                      <polyline id="Path-2" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" points="24 56.5393634 39.5576896 72.097053 76.6547426 35"></polyline>
+                  </g>
+              </svg>
+           </div>
+            <a href="#" onclick="popUp()">العودة</a>
+
+          </div>
+
           <section class="main-content__primary">
             <div class="main-content__primary__inner-wrapper">
 
@@ -185,7 +199,7 @@
               ERROR HANDLER
             </p>
             <div class="nolCardForm-submit-container clearfix">
-              <button class="nolCardForm-submit cta-btn" name="confirm-nol">تأكيد</button>
+              <button class="nolCardForm-submit cta-btn" name="confirm-nol" onclick="popUp()">تأكيد</button>
             </div>
 
           </section><!-- .main-content__profile-details -->
