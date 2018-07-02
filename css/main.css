@@ -507,7 +507,6 @@ input[type="text"]:required {
 
 .pop-up-close {
   position: absolute;
-  right: 0;
   height: 2.2rem;
   width: 2.2rem;
   line-height: 2.2rem;
@@ -519,6 +518,11 @@ input[type="text"]:required {
   padding: .2rem;
   background-color: #000f9e;
 }
+
+ html[dir="rtl"] .pop-up-close {
+  left: 0;
+  top: 0;
+ }
 
 
 /* Error box */
@@ -2651,10 +2655,6 @@ html[dir="rtl"].grid-aside-template .main-content {
   font-size: 120%;
 }
 
-/*.redeem-points-page .main-content__aside  {
-  flex-flow: row wrap;
-}
-*/
 .redeem-points-page .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/redeem-points/aside-img1.jpg');
   background-size: cover;  
@@ -2706,6 +2706,54 @@ html[dir="rtl"].grid-aside-template .main-content {
   }
 }
 
+
+/* =====================================
+   About Nol Plus page styles
+   ===================================== */
+.about-nol-plus-page .wrapper-main {
+  background-color: #fff;
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(1) {
+  background-image: url('../img/src/about-nol-plus/aside-img1.jpg');
+  background-size: cover;  
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(2) {
+  background-color: #0300a5;
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(3) {
+  background-image: url('../img/src/about-nol-plus/aside-img2.jpg');
+  background-size: cover;  
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(4) {
+  background-color: #0300a5; 
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(5) {
+  background-color: #fff;
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(6) {
+  background-color: #0300a5; 
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(7) {
+  background-image: url('../img/src/about-nol-plus/aside-img3.jpg');
+  background-size: cover;  
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(8) {
+  background-color: #0300a5;
+}
+
+.about-nol-plus-page .main-content__aside .col:nth-child(9) {
+  background-image: url('../img/src/about-nol-plus/aside-img4.jpg');
+  background-size: cover;  
+}
+
 /* =====================================
    Statement styles
    ===================================== */
@@ -2717,8 +2765,8 @@ html[dir="rtl"].grid-aside-template .main-content {
   position: fixed;
   background-color: #fff;
   width: 100%;
-  max-width: 40rem;
-  max-height: 30rem;
+  max-width: 30rem;
+  max-height: 25rem;
   overflow-x: hidden;
   overflow-y: auto;
   top: 25%; left: 0; bottom: 0; right: 0;
@@ -2726,7 +2774,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 3;
-  margin: 10rem auto;
+  margin: 7rem auto;
   display: block;
 } 
 
@@ -2738,13 +2786,13 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .statement-pop-up .transaction-table {
   display: table;
-  border: 1px solid red;
-  flex: 0 0 100%;
+  width: 100%;
   margin: .5rem 0;
 } 
 
+
 .statement-pop-up .transaction-table-header {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 
@@ -2755,11 +2803,28 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .statement-pop-up .transaction-table > div > div {
   display: table-cell;
-  border: 1px solid blue;
-  padding: .3rem .5rem;
+  padding: .2rem .4rem;
+  font-size: .9rem;
 }
 
 
+.statement-pop-up .points-table-wrapper table {
+  width: 100%;
+  border: 1px solid red;
+}
+
+.statement-pop-up .points-table-wrapper td {
+  padding: .2rem .4rem;
+}
+
+.statement-pop-up .points-table-wrapper th {
+  background-color: #000f9e;
+  color: #fff;
+  font-weight: normal;
+  font-size: .9em;
+  line-height: 1.8em;
+  vertical-align: middle;
+}
 
 .statement-page .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/statement/aside-img1.jpg');
@@ -2825,10 +2890,12 @@ html[dir="rtl"].grid-aside-template .main-content {
     background-color: #fff;
     border-bottom: 3px solid #44ffe2;
   }
+}
 
+@media (min-width: 520px) {
   .statement-pop-up .transaction-table {
-    flex: 0 0 50%;
-    margin: .5rem 0;
+    flex: 1 1 50%;
+    width: 50%;
   } 
 }
 
