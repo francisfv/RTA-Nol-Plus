@@ -2197,8 +2197,9 @@ html[dir="rtl"].grid-aside-template .main-content {
     -webkit-flex: 0 0 195px;
         -ms-flex: 0 0 195px;
             flex: 0 0 195px;
-
   }
+  
+
 
 
   .grid-aside-template-bisected .main-content__primary__inner-wrapper {
@@ -2287,6 +2288,26 @@ html[dir="rtl"].grid-aside-template .main-content {
    ===================================== */
 .link-nol-card-page .wrapper-main {
   background-color: #ffd65e;
+}
+
+.link-nol-card-page .nol-pop-up h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 1.5rem;  
+}
+
+.link-nol-card-page .nol-pop-up p {
+  font-size: 1.1rem;
+  padding-bottom: .2rem;
+
+}
+
+.link-nol-card-page .nol-pop-up p + p {
+  font-size: .9rem;
+  padding-bottom: .2rem;
+
 }
 
 
@@ -2714,6 +2735,10 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #fff;
 }
 
+.about-nol-plus-page .main-content__primary p {
+  margin-bottom: 1rem;
+}
+
 .about-nol-plus-page .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/about-nol-plus/aside-img1.jpg');
   background-size: cover;  
@@ -2754,6 +2779,37 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-size: cover;  
 }
 
+.about-nol-plus-page .about-nol-plus-page__aside-pattern {
+  min-width: 100%;
+  height: 100%;
+  min-height: 195px;
+  background-image: url('../img/src/about-nol-plus/aside-img5.jpg');
+  background-size: cover;   
+}
+
+
+@media (min-width: 1040px) {
+  .grid-aside-template.about-nol-plus-page .main-content, .grid-aside-template.about-nol-plus-page .main-content__primary, .grid-aside-template.about-nol-plus-page .main-content__aside {
+    min-height: 585px;
+    max-height: 585px;
+  }
+
+  .grid-aside-template.grid-3-3.about-nol-plus-page .main-content__aside {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 390px;
+        -ms-flex: 0 0 390px;
+            flex: 0 0 390px;
+    min-width: 390px;
+  }
+
+  .grid-aside-template.grid-3-3.about-nol-plus-page .main-content__aside .col{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 130px;
+        -ms-flex: 0 0 130px;
+            flex: 0 0 130px;
+  }
+}
+
 /* =====================================
    Statement styles
    ===================================== */
@@ -2765,8 +2821,8 @@ html[dir="rtl"].grid-aside-template .main-content {
   position: fixed;
   background-color: #fff;
   width: 100%;
-  max-width: 30rem;
-  max-height: 25rem;
+  max-width: 37rem;
+  max-height: 35rem;
   overflow-x: hidden;
   overflow-y: auto;
   top: 25%; left: 0; bottom: 0; right: 0;
@@ -2775,13 +2831,29 @@ html[dir="rtl"].grid-aside-template .main-content {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 3;
   margin: 7rem auto;
-  display: block;
+  display: none;
 } 
 
+.transaction-table-header, 
+.points-table-header,
+.redeem-table-header {
+  color: #000f9e;
+}
+
 .statement-pop-up .transaction-table-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .statement-pop-up .transaction-table {
@@ -2808,22 +2880,29 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 
-.statement-pop-up .points-table-wrapper table {
+.statement-pop-up .points-table-wrapper table, .statement-pop-up .redeem-table-wrapper table {
   width: 100%;
-  border: 1px solid red;
+  border-collapse: collapse;
 }
 
-.statement-pop-up .points-table-wrapper td {
+.statement-pop-up .points-table-wrapper, .statement-pop-up .redeem-table-wrapper {
+  margin: 1rem 0;
+}
+
+
+
+.statement-pop-up .points-table-wrapper td, .statement-pop-up .points-table-wrapper th, .statement-pop-up .redeem-table-wrapper td, .statement-pop-up .redeem-table-wrapper th {
   padding: .2rem .4rem;
 }
 
-.statement-pop-up .points-table-wrapper th {
+.statement-pop-up .points-table-wrapper th, .statement-pop-up .redeem-table-wrapper th {
   background-color: #000f9e;
   color: #fff;
   font-weight: normal;
   font-size: .9em;
   line-height: 1.8em;
   vertical-align: middle;
+  text-align: right;
 }
 
 .statement-page .main-content__aside .col:nth-child(1) {
@@ -2851,6 +2930,11 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #000f9e;
   color: #fff;
 
+}
+
+
+.statement-pop-up .points-table-wrapper h6, .statement-pop-up .redeem-table-wrapper h6 {
+  margin-bottom: .5rem;
 }
 
 .statement-table tbody tr:hover {
@@ -2890,13 +2974,38 @@ html[dir="rtl"].grid-aside-template .main-content {
     background-color: #fff;
     border-bottom: 3px solid #44ffe2;
   }
+  
+
 }
 
-@media (min-width: 520px) {
+@media (min-width: 630px) {
+  .statement-pop-up {
+    max-height: 20rem;
+  }
+
   .statement-pop-up .transaction-table {
-    flex: 1 1 50%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 50%;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
     width: 50%;
   } 
+
+  .statement-pop-up .points-table-wrapper, .statement-pop-up .redeem-table-wrapper {
+    width: 56%;
+  }
+
+  .statement-pop-up .redeem-table-wrapper {
+    width: 40%; 
+  }
+
+  .statement-pop-up .points-table-wrapper{
+    float: right;
+  }
+
+  .statement-pop-up .redeem-table-wrapper {
+    float: left;
+  }
 }
 
 @media (min-width: 1040px) {
@@ -2990,6 +3099,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   margin-bottom: 2rem;
 }
 
+
 @media (min-width: 900px) {
   .contact-us-page .main-content__primary {
     padding-left: 1em;
@@ -3071,8 +3181,14 @@ html[dir="rtl"].grid-aside-template .main-content {
     max-width: 100%;
   }
   
-
-
+ @media (min-width: 1040px) {
+  .contact-us-release-page .main-content__primary {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 70%;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+  }
+ }
 }
 
 /* =====================================
@@ -3323,6 +3439,7 @@ html[dir="rtl"]._404-page .main-content {
 ._404-page .main-content h1 {
   font-size: 2.5rem;
   margin-bottom: .5rem;
+  direction: ltr;
 }
 
 ._404-page .main-content p {
@@ -3347,6 +3464,7 @@ html[dir="rtl"]._404-page .main-content {
   }
   ._404-page .main-content p {
     font-size: 1.7rem;
+      width: 70%;
   }
 }
 

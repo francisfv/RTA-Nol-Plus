@@ -95,47 +95,47 @@
             
             <div class="pop-up-inner clearfix">
               <a href="#" class="pop-up-close" onclick="popUp()">X</a>
-              <h6 class="transaction-table-header">Transaction details</h6>
+              <h6 class="transaction-table-header"> تفاصيل المعاملة</h6>
 
 
               <div class="transaction-table-wrapper">
                 <div class="transaction-table">
                     <div>
-                      <div><strong>Transaction number:</strong>&nbsp;<span>10920</span></div>
+                      <div><strong> رقم المعاملة:</strong>&nbsp;<span>10920</span></div>
                     </div>
 
                     <div>
-                      <div><strong>Date:</strong>&nbsp;<span>03/09/2018</span></div>
+                      <div><strong> التاريخ:</strong>&nbsp;<span>03/09/2018</span></div>
                     </div>
 
                     <div>
-                      <div><strong>Earned/Redeemed at:</strong>&nbsp;<span>Dubai Metro</span></div>
+                      <div><strong> مكتسبة/ مستبدلة في: </strong>&nbsp;<span>Dubai Metro</span></div>
                     </div>
                 </div>
 
                 <div class="transaction-table">
                     <div>
-                      <div><strong>Identifier:</strong>&nbsp;<span>10920</span></div>
+                      <div><strong> رقم المعرِف:</strong>&nbsp;<span>0091237959</span></div>
                     </div>
 
                     <div>
-                      <div><strong>Transaction value:</strong>&nbsp;<span>03/09/2018</span></div>
+                      <div><strong>قيمة المعاملة:</strong>&nbsp;<span>7</span></div>
                     </div>
 
                     <div>
-                      <div><strong>Transaction type:</strong>&nbsp;<span>Dubai Metro</span></div>
+                      <div><strong>نوع المعاملة:</strong>&nbsp;<span>Sales</span></div>
                     </div>
                 </div>
               </div> 
 
               <div class="points-table-wrapper">
-                <h6 class="points-table-header">Award/Adjustment</h6>
+                <h6 class="points-table-header"> كسب / تعديل نقاط</h6>
                 <table>
                   <thead>
                     <tr>
-                      <th>Earned from</th>
-                      <th>Reward</th>
-                      <th>Points</th>
+                      <th>مكتسبة من</th>
+                      <th>المكتسب</th>
+                      <th>النقاط</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -143,6 +143,24 @@
                       <td>Dubai Metro</td>
                       <td>Nol+ Points</td>
                       <td>7pts</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="redeem-table-wrapper ">
+                <h6 class="redeem-table-header"> الاستبدال</h6>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>مستبدلة في</th>
+                      <th>النقاط</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
                     </tr>
                   </tbody>
                 </table>
@@ -244,7 +262,7 @@
   <script src="js/main.js"></script>
   <script>
     $(function(){
-    $('table').tablesorter({
+    $('.statement-table').tablesorter({
       usNumberFormat : false,
       sortReset      : true,
       sortRestart    : true

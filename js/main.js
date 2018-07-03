@@ -153,3 +153,5 @@ $('statement-table').click(function() {
         x.style.display = "none";
     }  
 });
+
+

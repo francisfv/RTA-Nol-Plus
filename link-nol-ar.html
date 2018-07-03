@@ -86,21 +86,20 @@
 
   <div class="wrapper wrapper-main">
     <div class="inner">      
-        
+        <a href="#" id="pop-up-backdrop" class="pop-up-backdrop" tabindex="-1" aria-hidden="true" hidden onclick="popUp()"></a>
+
         <main class="main-content">
 
-          <div id="nol-pop-up" class="nol-pop-up">
-            <p> لقد استبدلت نقاطك بنجاح مقابل إعادة تعبئة نول بقيمة 5 درهم.</p>
-            <div>
-              <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <circle id="Oval" stroke="#FFFFFF" stroke-width="8" cx="50" cy="50" r="46"></circle>
-                      <polyline id="Path-2" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" points="24 56.5393634 39.5576896 72.097053 76.6547426 35"></polyline>
-                  </g>
-              </svg>
-           </div>
-            <a href="#" onclick="popUp()">العودة</a>
+          <div id="pop-up-window" class="nol-pop-up">
+            <h3> تهانينا!</h3>
+            <p>
+                لقد أصبحت الآن عضو في برنامج نول بلاس.
+            </p>
 
+            <p>
+                يُرجى مراجعة صندوق البريد الإلكتروني الخاص بك للاطلاع على رسالة الترحيب.
+            </p>
+            <a href="#" onclick="popUp()"> المتابعة</a>
           </div>
 
           <section class="main-content__primary">
@@ -250,7 +249,6 @@
   <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
   <script src="js/vendor/jquery.responsive-dom.min.js"></script> 
   <script src="js/vendor/siema.min.js"></script> 
-  <!-- <script src="js/vendor/datepicker.min.js"></script>  -->
   <script src="js/main.js"></script>
   <script>
   $(function(){
