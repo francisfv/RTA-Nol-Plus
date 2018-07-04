@@ -3495,55 +3495,39 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #fff;
 }
 
-.offer-details-page  .main-content__aside .col {
-  border: 1px solid red;
-}
 
 .offer-details-page  .main-content__aside .col:nth-child(1) {
-  flex: 0 0 100%;
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 390px;
   background-image: url('../img/src/offer-details/aside-img1.jpg');
   background-size: cover;  
 }
 
-.offer-details-page  .main-content__aside .col:nth-child(1)::after {
-  padding-bottom: 50%; 
+.offer-details-page  .main-content__aside .col:nth-child(2), .offer-details-page  .main-content__aside .col:nth-child(3) {
+  width: 50%;
+  height: 100%;
+  max-height: 195px; 
 }
 
 .offer-details-page  .main-content__aside .col:nth-child(2) {
   background-image: url('../img/src/offer-details/aside-img2.jpg');
   background-size: cover;  
-  flex: 0 0 50%;
-  min-width: 195px;
+  float: left;
 }
 
-.offer-details-page  .main-content__aside .col:nth-child(2)::after {
-  padding-bottom: 100%; 
-}
 
 .offer-details-page  .main-content__aside .col:nth-child(3) {
   background-image: url('../img/src/offer-details/aside-img3.jpg');
   background-size: cover;
-  flex: 0 0 50%;
-  max-width: 195px;  
+  float: right;
 }
 
-.offer-details-page  .main-content__aside .col:nth-child(3)::after {
-  padding-bottom: 100%; 
+.offer-details-page  .main-content__aside .col:nth-child(2)::after, .offer-details-page  .main-content__aside .col:nth-child(3)::after {
+  padding-bottom: 100%;
 }
 
 @media (min-width: 1040px) {
-  .offer-details-page  .main-content__aside .col:nth-child(1)::after {
-    padding-bottom: 390px; 
-  }
-
-  .offer-details-page  .main-content__aside .col:nth-child(2)::after {
-    padding-bottom: 100%; 
-  }
-
-  .offer-details-page  .main-content__aside .col:nth-child(3)::after {
-    padding-bottom: 100%; 
-  }
 
   .grid-aside-template.offer-details-page .main-content, .grid-aside-template.offer-details-page .main-content__primary, .grid-aside-template.offer-details-page .main-content__aside {
     min-height: 585px;
