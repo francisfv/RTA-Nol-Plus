@@ -3352,6 +3352,143 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 
 /* =====================================
+   Offer pages styles
+   ===================================== */
+.offers-page .wrapper-main {
+  background-color: #fff;
+}
+
+.offers-page .main-content__primary .member-name {
+    font-size: 200%;
+    margin: 1.5em 0 .5em 0;
+}
+
+.offers-page .main-content__primary .member-points {
+    font-size: 120%;
+}
+
+
+.offers-page .main-content__aside {
+  height: 600px;
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.offers-page .main-content__aside .col {
+  width: 100%;
+  max-width: 195px;
+  height: 390px;
+  max-height: 390px;
+  text-decoration: none;
+  outline: 0;
+  margin-bottom: .5em;
+}
+
+.offers-page .main-content__aside .offer:nth-child(odd) {
+  background-color: #cc386b;
+}
+
+.offers-page .main-content__aside .offer:nth-child(even) {
+  background-color: #448eff;
+}
+
+
+.offers-page img {
+  display: block;
+  margin: 0 auto;
+}
+
+.offers-page .offer-img {
+  width: 100%;
+}
+
+.offers-page .offer-details {
+  max-height: 195px;
+  height: 100%;
+  overflow-y: hidden;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.offers-page .offer-details > *{ 
+  text-align: center;
+  color: #fff;
+}
+
+.offers-page .offer-details > h6 {
+  font-size: 1.8rem;
+}
+
+.offers-page .offer-details > p {
+  padding: 0 .5rem;
+}
+
+
+.offers-page .offer-logo {
+  height: 90px;
+  vertical-align: middle;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+
+.offers-page .offer-logo img {
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+
+@media (min-width: 1040px) {
+  .grid-aside-template.offers-page .main-content, .grid-aside-template.offers-page .main-content__primary, .grid-aside-template.offers-page .main-content__aside {
+    min-height: 780px;
+    max-height: 780px;
+  }
+  .grid-aside-template.offers-page .main-content__aside {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 585px;
+        -ms-flex: 0 0 585px;
+            flex: 0 0 585px;
+    min-width: 585px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .grid-aside-template.offers-page .main-content__primary {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 40%;
+        -ms-flex: 1 1 40%;
+            flex: 1 1 40%;
+  }
+
+  .offers-page .main-content__aside .col {
+    margin-bottom: 0;
+  }
+
+}
+
+/* =====================================
    Terms & Condition + Privacy Policy styles
    ===================================== */
 .terms-page .wrapper-main {
@@ -3487,6 +3624,7 @@ html[dir="rtl"]._404-page .main-content {
   margin-top: 2%;
   width: 100%;
   height: auto;
+  
 }
 .main-footer__secondary-navigation-container, .main-footer__secondary-navigation ul {
   -webkit-box-orient: horizontal;
