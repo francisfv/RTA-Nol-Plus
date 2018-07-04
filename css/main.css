@@ -3352,7 +3352,7 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 
 /* =====================================
-   Offer pages styles
+   Offer page styles
    ===================================== */
 .offers-page .wrapper-main {
   background-color: #fff;
@@ -3486,6 +3486,86 @@ html[dir="rtl"].grid-aside-template .main-content {
     margin-bottom: 0;
   }
 
+}
+
+/* =====================================
+   Offer details page styles
+   ===================================== */
+.offer-details-page .wrapper-main {
+  background-color: #fff;
+}
+
+.offer-details-page  .main-content__aside .col {
+  border: 1px solid red;
+}
+
+.offer-details-page  .main-content__aside .col:nth-child(1) {
+  flex: 0 0 100%;
+  min-width: 100%;
+  background-image: url('../img/src/offer-details/aside-img1.jpg');
+  background-size: cover;  
+}
+
+.offer-details-page  .main-content__aside .col:nth-child(1)::after {
+  padding-bottom: 50%; 
+}
+
+.offer-details-page  .main-content__aside .col:nth-child(2) {
+  background-image: url('../img/src/offer-details/aside-img2.jpg');
+  background-size: cover;  
+  flex: 0 0 50%;
+  min-width: 195px;
+}
+
+.offer-details-page  .main-content__aside .col:nth-child(2)::after {
+  padding-bottom: 100%; 
+}
+
+.offer-details-page  .main-content__aside .col:nth-child(3) {
+  background-image: url('../img/src/offer-details/aside-img3.jpg');
+  background-size: cover;
+  flex: 0 0 50%;
+  max-width: 195px;  
+}
+
+.offer-details-page  .main-content__aside .col:nth-child(3)::after {
+  padding-bottom: 100%; 
+}
+
+@media (min-width: 1040px) {
+  .offer-details-page  .main-content__aside .col:nth-child(1)::after {
+    padding-bottom: 390px; 
+  }
+
+  .offer-details-page  .main-content__aside .col:nth-child(2)::after {
+    padding-bottom: 100%; 
+  }
+
+  .offer-details-page  .main-content__aside .col:nth-child(3)::after {
+    padding-bottom: 100%; 
+  }
+
+  .grid-aside-template.offer-details-page .main-content, .grid-aside-template.offer-details-page .main-content__primary, .grid-aside-template.offer-details-page .main-content__aside {
+    min-height: 585px;
+    max-height: 585px;
+  }
+  .grid-aside-template.offer-details-page .main-content__aside {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 390px;
+        -ms-flex: 0 0 390px;
+            flex: 0 0 390px;
+    min-width: 390px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .grid-aside-template.offer-details-page .main-content__primary {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 60%;
+        -ms-flex: 1 1 60%;
+            flex: 1 1 60%;
+  }
 }
 
 /* =====================================
@@ -3624,7 +3704,7 @@ html[dir="rtl"]._404-page .main-content {
   margin-top: 2%;
   width: 100%;
   height: auto;
-  
+
 }
 .main-footer__secondary-navigation-container, .main-footer__secondary-navigation ul {
   -webkit-box-orient: horizontal;
