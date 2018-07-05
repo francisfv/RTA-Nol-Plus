@@ -3495,6 +3495,23 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #fff;
 }
 
+.offer-details-page .main-content__primary > div {
+  margin: 1.5rem 0;
+}
+
+.offer-details-page .main-content__primary .offer-header  {
+  margin-bottom: 1rem;
+}
+
+.offer-details-page .main-content__primary > div > h4  {
+  color: #0300a5;;
+  font-size: 1.1rem;
+}
+
+.offer-details-page .main-content__primary  p  {
+  font-size: .9rem;
+}
+
 
 .offer-details-page  .main-content__aside .col:nth-child(1) {
   width: 100%;
@@ -3528,6 +3545,10 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 @media (min-width: 1040px) {
+
+  .offer-details-page .cta-btn {
+    max-width: 35%;
+  }
 
   .grid-aside-template.offer-details-page .main-content, .grid-aside-template.offer-details-page .main-content__primary, .grid-aside-template.offer-details-page .main-content__aside {
     min-height: 585px;
@@ -3678,6 +3699,12 @@ html[dir="rtl"]._404-page .main-content {
 /* =====================================
    Footer styles
    ===================================== */
+
+.wrapper-footer .inner {
+  border-top: 1px solid #e2e2e2;
+}
+
+
 .main-footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -3873,8 +3900,8 @@ html[dir="rtl"]._404-page .main-content {
   color: #ff0000;
 }
 
-.dir-ltr {
-
+html[dir="rtl"] .lang-en {
+  direction: ltr;
 }
 
 /*
