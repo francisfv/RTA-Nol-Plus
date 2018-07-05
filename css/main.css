@@ -3367,6 +3367,10 @@ html[dir="rtl"].grid-aside-template .main-content {
     font-size: 120%;
 }
 
+.offers-page .main-content__primary .member-points span {
+  font-size: 140%;
+}
+
 
 .offers-page .main-content__aside {
   height: 600px;
@@ -3430,7 +3434,9 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 .offers-page .offer-details > h6 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: .4rem;
 }
 
 .offers-page .offer-details > p {
@@ -3493,6 +3499,11 @@ html[dir="rtl"].grid-aside-template .main-content {
    ===================================== */
 .offer-details-page .wrapper-main {
   background-color: #fff;
+}
+
+.offer-details-page .cta-btn {
+  max-width: 43%;
+  margin: .5rem;
 }
 
 .offer-details-page .main-content__primary > div {
