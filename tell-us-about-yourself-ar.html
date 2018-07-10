@@ -85,8 +85,22 @@
 
   <div class="wrapper wrapper-main">
     <div class="inner">      
-        
+        <a href="#" id="pop-up-backdrop" class="pop-up-backdrop" tabindex="-1" aria-hidden="true" hidden onclick="popUp()" style="display: block;"></a> 
+
         <main class="main-content">
+          
+
+          <div id="pop-up-window" class="nol-pop-up" style="display: block;">
+            <h3> تهانينا!</h3>
+            <p>
+                لقد أصبحت الآن عضو في برنامج نول بلاس.
+            </p>
+
+            <p>
+                يُرجى مراجعة صندوق البريد الإلكتروني الخاص بك للاطلاع على رسالة الترحيب.
+            </p>
+            <a href="#" onclick="popUp()"> المتابعة</a>
+          </div>
 
           <section class="main-content__primary">
 
@@ -305,7 +319,7 @@
                 </p>
 
                 <div class="aboutYourselfForm-buttonset row">
-                  <button class="aboutYourselfForm-submit cta-btn" name="">إرسال</button>
+                  <button class="aboutYourselfForm-submit cta-btn" name="" onclick="popUp()">إرسال</button>
                   <button class="aboutYourselfForm-skip cta-btn" name="">تجاوز</button>
                 </div>
 
@@ -339,7 +353,7 @@
     <div class="inner">
       <footer class="main-footer row">
            <a class="main-footer__logo" href="#" title="Go back to home page">
-              <img class="logo-fallback" src="img/src/rta-nol-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
+              <img class="logo-fallback" src="img/src/rta-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
           </a><!-- .mast__logo -->
 
           <div class="main-footer__secondary-navigation-container row">

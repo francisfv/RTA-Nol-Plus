@@ -366,7 +366,7 @@ input[type="text"], input[type="button"], select {
 }
 
 .nolForm-inputSet > div {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 .nolForm-inputSet .nolForm-area select {
@@ -599,6 +599,12 @@ input[type="text"]:required {
   font-size: 75%;
 }
 
+.card-label[contenteditable="true"]:focus {
+/*  color: #fff;
+*/  background-color: #fff; 
+  /*box-shadow: inset 0px 0px 0px 1px #0300a5; */
+  outline: 0;
+}
 
 .card-option a {
   text-decoration: none;
@@ -2290,26 +2296,50 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #ffd65e;
 }
 
-.link-nol-card-page .nol-pop-up h3 {
-  color: #fff;
-  text-align: center;
-  font-size: 2rem;
+
+.link-nol-card-page input[type="text"], .link-nol-card-page input[type="button"], .link-nol-card-page select {
+  height: 2.3rem;
+}
+
+.link-nol-card-page .nol-card-number, .link-nol-card-page .nolForm-bday {
+  max-width: 58%;
+  width: 100%;
+}
+
+.link-nol-card-page .nolForm-bday, .link-nol-card-page .nolForm-bday + small {
   display: block;
-  padding-bottom: 1.5rem;  
 }
 
-.link-nol-card-page .nol-pop-up p {
-  font-size: 1.1rem;
-  padding-bottom: .2rem;
-
+.link-nol-card-page .nolForm-bday {
+  float: right;
 }
 
-.link-nol-card-page .nol-pop-up p + p {
-  font-size: .9rem;
-  padding-bottom: .2rem;
-
+.link-nol-card-page .nolForm-bday + small {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: .7rem;
+  color: #ff0000;
 }
 
+.link-nol-card-page select  {
+  width: 49% !important;
+  margin: 0;
+}
+
+.link-nol-card-page select:first-child {
+  float: left;
+}
+
+.link-nol-card-page select:last-child {
+  float: right;
+}
+
+
+.link-nol-card-page .nol-card-number + .cta-btn, .nolForm-bday + small {
+  max-width: 40%;
+  width: 100%;
+}
 
 .link-nol-card-page .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/link-nol-card/Nol-Card-Link2.jpg');
@@ -2334,7 +2364,6 @@ html[dir="rtl"].grid-aside-template .main-content {
   .link-nol-card-page .nolCardForm-submit-container > .nolCardForm-submit {
     width: 30%;
     display: block;
-    margin: 1em auto;
   }
 }
 
@@ -2349,6 +2378,10 @@ html[dir="rtl"].grid-aside-template .main-content {
 
 .tell-us-about-yourself-page .main-content__primary h4 {
   margin-bottom: 2rem;
+}
+
+.tell-us-about-yourself-page .main-content__primary .date-of-birth {
+  margin: 1rem 0;
 }
 
 .aboutYourselfForm .row {
@@ -2474,6 +2507,26 @@ html[dir="rtl"].grid-aside-template .main-content {
   margin: auto;
   display: none;
 }  
+
+.nol-pop-up h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 1.5rem;  
+}
+
+.nol-pop-up p {
+  font-size: 1.1rem;
+  padding-bottom: .2rem;
+
+}
+
+.nol-pop-up p + p {
+  font-size: .9rem;
+  padding-bottom: .2rem;
+
+}
 
 .nol-pop-up p, .nol-pop-up a {
   color:  #fff;
@@ -2992,19 +3045,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   } 
 
   .statement-pop-up .points-table-wrapper, .statement-pop-up .redeem-table-wrapper {
-    width: 56%;
-  }
-
-  .statement-pop-up .redeem-table-wrapper {
-    width: 40%; 
-  }
-
-  .statement-pop-up .points-table-wrapper{
-    float: right;
-  }
-
-  .statement-pop-up .redeem-table-wrapper {
-    float: left;
+    width: 100%;
   }
 }
 
@@ -3195,7 +3236,7 @@ html[dir="rtl"].grid-aside-template .main-content {
    FAQ styles
    ===================================== */
 .faq-page .wrapper-main {
-  background-color: #ffd65e;
+  background-color: #fff;
 }  
 
 .faq-page  .main-content__aside .col:nth-child(1) {
@@ -3204,7 +3245,7 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 .faq-page  .main-content__aside .col:nth-child(2) {
-  background-color: #fff;
+  background-color: #ffd65e;
 }
 
 .faq-page  .main-content__aside .col:nth-child(3) {
@@ -3236,7 +3277,6 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 .offers-static-page .member-details__member-points {
-  font-weight: bold;
 }
 
 .offers-static-page .member-details__member-points .points {
@@ -3377,18 +3417,8 @@ html[dir="rtl"].grid-aside-template .main-content {
   max-height: 600px;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
           align-items: flex-start;
 }
 
@@ -3479,7 +3509,7 @@ html[dir="rtl"].grid-aside-template .main-content {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
-            justify-content: flex-start;
+            justify-content: space-between;
   }
   .grid-aside-template.offers-page .main-content__primary {
     -webkit-box-flex: 1;

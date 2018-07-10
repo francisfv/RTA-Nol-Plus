@@ -132,8 +132,13 @@
                     
                     <h5 class="text-blue"> التفاصيل الشخصية</h5>
                     <fieldset class="nolForm-inputSet">
-                      <p><input id="nolForm-bday" class="nolForm-field form-datepicker nolForm-bday" type="text" name="birthday" required placeholder="تاريخ الميلاد"></p>
+                     <div>
+                      <p  class="clearfix">
+                        <input id="nolForm-bday" class="nolForm-field form-datepicker nolForm-bday" type="text" name="birthday" required placeholder="تاريخ الميلاد">
+                        <small>لا يمكننا تغيير تاريخ ميلادك بعد قيامك بإدخاله</small>
+                      </p>
                       
+                     </div>  
                       <p class="nolForm-area">
                         <select name="emirates" form="" placeholder="Emirates">
                           <option value="default" selected>الإمارة</option>
@@ -224,7 +229,7 @@
     <div class="inner">
       <footer class="main-footer row">
            <a class="main-footer__logo" href="#" title="Go back to home page">
-              <img class="logo-fallback" src="img/src/rta-nol-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
+              <img class="logo-fallback" src="img/src/rta-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
           </a><!-- .mast__logo -->
 
           <div class="main-footer__secondary-navigation-container row">

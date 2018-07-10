@@ -86,8 +86,24 @@
 
   <div class="wrapper wrapper-main">
     <div class="inner">      
+
+        <a href="#" id="pop-up-backdrop" class="pop-up-backdrop" tabindex="-1" aria-hidden="true" hidden onclick="popUp()"></a> 
         
         <main class="main-content">
+          
+          <div id="pop-up-window" class="nol-pop-up">
+            <p> لقد استبدلت نقاطك بنجاح مقابل إعادة تعبئة نول بقيمة 5 درهم.</p>
+            <div>
+              <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="8" cx="50" cy="50" r="46"></circle>
+        <polyline id="Path-2" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" points="24 56.5393634 39.5576896 72.097053 76.6547426 35"></polyline>
+    </g>
+</svg>
+           </div>
+            <a href="#" onclick="popUp()">العودة</a>
+
+          </div>
 
           <section class="main-content__primary">
 
@@ -102,9 +118,11 @@
 
                 <fieldset class="personalDetails clearfix">
                   <legend class="text-blue">المعلومات الشخصية</legend>
-
+                  <p class="date-of-birth">
+                    Date of birth: 06/14/1992
+                  </p>
                   <p class="personalDetails--input clearfix">
-                    <input id="nolForm-bday" class="nolForm-field form-datepicker nolForm-bday" type="text" name="birthday" required placeholder="تاريخ الميلاد"><select name="emirates" form="" placeholder="Emirates">
+                    <select name="emirates" form="" placeholder="Emirates">
                       <option value="default" disabled selected hidden>الإمارة</option>
                       <option value="Dubai">دبي</option>
                       <option value="Abu Dhabi">أبو ظبي</option>
@@ -340,8 +358,8 @@
                 </p>
  
                 <div class="aboutYourselfForm-buttonset row">
-                  <button class="aboutYourselfForm-submit cta-btn" name="">إرسال</button>
-                  <button class="aboutYourselfForm-skip cta-btn" name="">تجاوز</button>
+                  <button class="aboutYourselfForm-save cta-btn" name="">إلغاء</button>
+                  <button class="aboutYourselfForm-cancel cta-btn" name="">حفظ</button>
                 </div>
 
               </form>
@@ -374,7 +392,7 @@
     <div class="inner">
       <footer class="main-footer row">
            <a class="main-footer__logo" href="#" title="Go back to home page">
-              <img class="logo-fallback" src="img/src/rta-nol-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
+              <img class="logo-fallback" src="img/src/rta-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
           </a><!-- .mast__logo -->
 
           <div class="main-footer__secondary-navigation-container row">

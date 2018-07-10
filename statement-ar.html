@@ -92,7 +92,7 @@
 
         <main class="main-content">
           <div id="pop-up-window" class="statement-pop-up">
-            
+           
             <div class="pop-up-inner clearfix">
               <a href="#" class="pop-up-close" onclick="popUp()">X</a>
               <h6 class="transaction-table-header"> تفاصيل المعاملة</h6>
@@ -133,7 +133,7 @@
                 <table>
                   <thead>
                     <tr>
-                      <th>مكتسبة من</th>
+                      <th>في</th>
                       <th>المكتسب</th>
                       <th>النقاط</th>
                     </tr>
@@ -147,29 +147,10 @@
                   </tbody>
                 </table>
               </div>
-
-              <div class="redeem-table-wrapper ">
-                <h6 class="redeem-table-header"> الاستبدال</h6>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>مستبدلة في</th>
-                      <th>النقاط</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
                
             </div>
-          </div>
 
+          </div>
 
           
 
@@ -194,15 +175,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                   <tr><td><a href="#">September</a></td><td><a href="#">03/09/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">Earn</a></td><td><a href="#">1000</a></td></tr>
-                   <tr><td><a href="#">August</a></td><td><a href="#">15/08/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Redeem</a></td><td><a href="#">800</a></td></tr>
-                   <tr><td><a href="#">July</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">Earn</a></td><td><a href="#">20000</a></td></tr>
-                   <tr><td><a href="#">July</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
-                   <tr><td><a href="#">July</a></td><td><a href="#">16/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
-                   <tr><td><a href="#">July</a></td><td><a href="#">04/07/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">Earn</a></td><td><a href="#">1000</a></td></tr>
-                   <tr><td><a href="#">June</a></td><td><a href="#">29/06/2018</a></td><td><a href="#">Restaurant voucher</a></td><td><a href="#">Redeem</a></td><td><a href="#">800</a></td></tr>
-                   <tr><td><a href="#">June</a></td><td><a href="#">25/06/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">Earn</a></td><td><a href="#">4000</a></td></tr>
-                   <tr><td><a href="#">June</a></td><td><a href="#">16/06/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">September</a></td><td><a href="#">03/09/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">Earn</a></td><td><a href="#">1000</a></td></tr>
+                   <tr class="redeem"><td><a href="#">August</a></td><td><a href="#">15/08/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Redeem</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">July</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">Earn</a></td><td><a href="#">20000</a></td></tr>
+                   <tr class="earn"><td><a href="#">July</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">July</a></td><td><a href="#">16/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">July</a></td><td><a href="#">04/07/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">Earn</a></td><td><a href="#">1000</a></td></tr>
+                   <tr class="redeem"><td><a href="#">June</a></td><td><a href="#">29/06/2018</a></td><td><a href="#">Restaurant voucher</a></td><td><a href="#">Redeem</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">June</a></td><td><a href="#">25/06/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">Earn</a></td><td><a href="#">4000</a></td></tr>
+                   <tr class="earn"><td><a href="#">June</a></td><td><a href="#">16/06/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">Earn</a></td><td><a href="#">800</a></td></tr>
                 </tbody>
               </table>
             </div>
@@ -230,7 +211,7 @@
     <div class="inner">
       <footer class="main-footer row">
            <a class="main-footer__logo" href="#" title="Go back to home page">
-              <img class="logo-fallback" src="img/src/rta-nol-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
+              <img class="logo-fallback" src="img/src/rta-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
           </a><!-- .mast__logo -->
 
           <div class="main-footer__secondary-navigation-container row">
@@ -270,11 +251,10 @@
   });
 
     $('.statement-table').basictable();
-
+   
     $('.statement-table tbody tr').click(function() {
             var popUpWindow = document.getElementById("pop-up-window");
     var popUpBackdrop = document.getElementById("pop-up-backdrop");
-
     if ((popUpWindow.style.display === "none") && (popUpBackdrop.style.display === "none")) {
         popUpWindow.style.display = "block";
         popUpBackdrop.style.display = "block";
