@@ -649,8 +649,8 @@ input[type="text"]:required {
   -webkit-justify-content: space-around;  
       -ms-flex-pack: distribute;  
           justify-content: space-around;
-  max-width: 120px;
   margin: 0 auto;
+  max-width: 10rem;
   }
 
   .link-nol-card-page .cardList li {
@@ -1674,6 +1674,11 @@ input[type="text"]:required {
   font-size: .9rem;
   margin: 2% 0;
 }
+
+.home-page .grid-bg-2.grid-bg-2.grid-bg-2 {
+  background-image: url('../img/src/home/pattern1');
+}
+
 @media screen and (min-width: 450px) { 
   .logged-in .partner-featured-detail .partner-featured-detail__offer, .logged-in .partner-featured-detail .partner-featured-detail__info {
     text-align: center;
@@ -1715,7 +1720,7 @@ input[type="text"]:required {
    Profile page styles
    ===================================== */
 .profile-page .wrapper-main {
-  background-color: #00ffe2;
+  background-color: #ffd65e;
 }
 
 .profile-page .main-content {
@@ -2372,7 +2377,7 @@ html[dir="rtl"].grid-aside-template .main-content {
    Tell Us About Yourself styles
    ===================================== */
 .tell-us-about-yourself-page .wrapper-main {
-  background-color: #01ffe3;
+  background-color: #ffd65e;
 }
 
 
@@ -2462,6 +2467,34 @@ html[dir="rtl"].grid-aside-template .main-content {
     width: 50%;
   }
 }
+
+/* =====================================
+   Update preference page styles
+   ===================================== */
+.update-preference-page .wrapper-main {
+  background-color: #44ffe2;
+}
+
+
+.update-preference-page .main-content__aside .col:nth-child(1) {
+  background-image: url('../img/src/update-preference/aside-img1.jpg');
+  background-size: cover;
+}
+
+.update-preference-page .main-content__aside .col:nth-child(2) {
+  background-color: #fff;
+}
+
+.update-preference-page .main-content__aside .col:nth-child(3) {
+  background-color: #0300a5;
+  background-image: none;
+}
+
+.update-preference-page .main-content__aside .col:nth-child(4) {
+  background-image: url('../img/src/update-preference/aside-img2.jpg');
+  background-size: cover;
+}
+
 
 /* =====================================
    Home page styles
@@ -2603,6 +2636,8 @@ html[dir="rtl"].grid-aside-template .main-content {
   width: 100%;
   left: 0;
   top: 100%;
+  line-height: 1.7; 
+  margin:0;
 }
 
 
@@ -3239,6 +3274,10 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #fff;
 }  
 
+.faq-page .faq-question-header > * {
+  text-decoration: underline
+}
+
 .faq-page  .main-content__aside .col:nth-child(1) {
   background-image: url('../img/src/faq/aside-img1.jpg');
   background-size: cover;  
@@ -3418,7 +3457,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   overflow-x: hidden;
   overflow-y: auto;
           flex-flow: row wrap;
-          justify-content: center;
+          justify-content: space-around;
           align-items: flex-start;
 }
 
@@ -3430,6 +3469,7 @@ html[dir="rtl"].grid-aside-template .main-content {
   text-decoration: none;
   outline: 0;
   margin-bottom: .5em;
+
 }
 
 .offers-page .main-content__aside .offer:nth-child(odd) {
@@ -3501,11 +3541,9 @@ html[dir="rtl"].grid-aside-template .main-content {
     max-height: 780px;
   }
   .grid-aside-template.offers-page .main-content__aside {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 585px;
-        -ms-flex: 0 0 585px;
-            flex: 0 0 585px;
-    min-width: 585px;
+
+    flex: 0 0 615px;
+    min-width: 615px;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -3519,7 +3557,8 @@ html[dir="rtl"].grid-aside-template .main-content {
   }
 
   .offers-page .main-content__aside .col {
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
   }
 
 }
