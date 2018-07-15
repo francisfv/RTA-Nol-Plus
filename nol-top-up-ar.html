@@ -101,11 +101,20 @@
   <div class="wrapper wrapper-main">
     <div class="inner">      
         
-        <a href="#" id="pop-up-backdrop" class="pop-up-backdrop" tabindex="-1" aria-hidden="true" hidden onclick="popUp()"></a> 
+        <a href="#" id="pop-up-backdrop" class="pop-up-backdrop" tabindex="-1" aria-hidden="true" hidden onclick="hidePopUp()"></a> 
 
         <main class="main-content">
 
-          <div id="pop-up-window" class="nol-pop-up">
+          <div id="pop-up-window" class="nol-pop-up nol-pop-up1">
+            <p>Are you sure you want to top up Card #xxxxxx for X amount?</p>
+            <div class="cta-container">
+              <button class="cta-btn" name="proceed" onclick="confirmationPopUp()">Proceed</button>
+              <button class="cta-btn" name="cancel" onclick="popUp()">Cancel</button>
+            </div>
+
+          </div>
+
+          <div class="nol-pop-up nol-pop-up2">
             <p> لقد استبدلت نقاطك بنجاح مقابل إعادة تعبئة نول بقيمة 5 درهم.</p>
             <div>
               <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -115,7 +124,7 @@
     </g>
 </svg>
            </div>
-            <a href="#" onclick="popUp()">العودة</a>
+            <a href="#" onclick="hidePopUp()">العودة</a>
 
           </div>
 
@@ -125,7 +134,8 @@
           <rect class="box3" x="7" y="14" width="7" height="7"></rect>
           <rect class="box2" x="0" y="7" width="7" height="7"></rect>
           <rect class="box1" x="7" y="0" width="7" height="7"></rect>
-  </svg>  إعادة تعبئة نول <a href="#"><svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  </svg>  إعادة تعبئة نول <a class="i-icon" href="#" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua."><svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
         <path d="M13.4416961,4 C13.8798608,4 14.2491151,4.16207141 14.54947,4.48621908 C14.8498248,4.81036676 15,5.20235341 15,5.66219081 C15,6.12202821 14.8480581,6.51401487 14.5441696,6.83816254 C14.2402812,7.16231022 13.8727937,7.32438163 13.4416961,7.32438163 C13.0176657,7.32438163 12.6537118,7.16231022 12.3498233,6.83816254 C12.0459349,6.51401487 11.8939929,6.12202821 11.8939929,5.66219081 C11.8939929,5.20235341 12.0441681,4.81036676 12.344523,4.48621908 C12.6448778,4.16207141 13.0105986,4 13.4416961,4 Z M14.0989399,9.20141343 L11.9257951,17.2409894 C11.8056531,17.7008268 11.745583,18.002355 11.745583,18.145583 C11.745583,18.2285045 11.7773848,18.3057711 11.8409894,18.3773852 C11.904594,18.4489992 11.9717311,18.4848057 12.0424028,18.4848057 C12.1625448,18.4848057 12.2826849,18.4282691 12.4028269,18.3151943 C12.7208496,18.0362766 13.1024713,17.5312168 13.5477032,16.8 L13.9081272,17.0261484 C12.8409841,19.008726 11.7067198,20 10.5053004,20 C10.0459341,20 9.68021337,19.8624278 9.40812721,19.5872792 C9.13604104,19.3121305 9,18.9634886 9,18.5413428 C9,18.262425 9.06007007,17.9081294 9.18021201,17.4784452 L10.6537102,12.0734982 C10.7950537,11.5533543 10.8657244,11.1613676 10.8657244,10.8975265 C10.8657244,10.7316835 10.7985872,10.5846885 10.664311,10.4565371 C10.5300347,10.3283857 10.3462909,10.264311 10.1130742,10.264311 C10.0070666,10.264311 9.8798594,10.2680801 9.73144876,10.2756184 L9.86925795,9.82332155 L13.4628975,9.20141343 L14.0989399,9.20141343 Z" id="path-1"></path>
     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -136,7 +146,6 @@
         </g>
     </g>
 </svg></a></h1>
-
               <form class="nolTopUpForm" action="" method="get">
 
                 <div>
@@ -155,7 +164,7 @@
                             <option value="" selected>30.00</option>
                             <option value="" selected>35.00</option>
                           </select>
-                          <small class="dropdown-tip text-blue">(يمكنك إضافة أي بطاقة غير مرتبطة بحسابك)</small>
+                          <!-- <small class="dropdown-tip text-blue">(يمكنك إضافة أي بطاقة غير مرتبطة بحسابك)</small> -->
                         </span>
                       </p>
 
@@ -262,7 +271,24 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/vendor/jquery.responsive-dom.min.js"></script> 
   <script src="js/vendor/siema.min.js"></script> 
+  <script src="js/vendor/tippy.all.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    tippy('.i-icon', {
+      arrow: true,
+      arrowType: 'sharp',
+      size: 'large',
+      duration: 300,
+      animation: 'shift-toward',
+      hideOnClick: 'true',
+      placement: 'left',
+      zIndex: 2,
+      interactive: true,
+      flip: true,
+      flipBehavior: ['left', 'bottom'],
+      theme: 'rta',
+    });
+  </script>
 </body>
 
 </html>

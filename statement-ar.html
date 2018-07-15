@@ -121,17 +121,9 @@
                     <div>
                       <div><strong> التاريخ:</strong>&nbsp;<span>03/09/2018</span></div>
                     </div>
-
-                    <div>
-                      <div><strong> مكتسبة/ مستبدلة في: </strong>&nbsp;<span>Dubai Metro</span></div>
-                    </div>
                 </div>
 
                 <div class="transaction-table">
-                    <div>
-                      <div><strong> رقم المعرِف:</strong>&nbsp;<span>0091237959</span></div>
-                    </div>
-
                     <div>
                       <div><strong>قيمة المعاملة:</strong>&nbsp;<span>7</span></div>
                     </div>
@@ -143,7 +135,6 @@
               </div> 
 
               <div class="points-table-wrapper">
-                <h6 class="points-table-header"> كسب / تعديل نقاط</h6>
                 <table>
                   <thead>
                     <tr>
@@ -177,6 +168,26 @@
   </svg>   كشف النقاط</h1>
 
              <h3 class="member-name">Francis Ventura</h3>
+
+             <form class="date-filter" action="">
+               <fieldset>
+                 <legend>
+                   التاريخ
+                 </legend>
+                
+                  <fieldset class="date-filter-from" >
+                    <label for="">من:</label>
+                    <input class="date-range form-datepicker" type="text" placeholder="DD/MM/YYYY">
+                  </fieldset>
+
+                  <fieldset class="date-filter-to">
+                    <label for="">إلى:</label>
+                    <input class="date-range form-datepicker" type="text" placeholder="DD/MM/YYYY">
+                  </fieldset>
+
+               </fieldset>
+             </form>
+
              <div class="table-wrap">
                <table class="statement-table tablesorter">
                 <thead>
@@ -249,6 +260,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 
   <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
   <script src="js/vendor/jquery.responsive-dom.min.js"></script> 
   <script src="js/vendor/siema.min.js"></script> 
   <script src="js/vendor/jquery.basictable.min.js"></script> 
@@ -267,15 +279,19 @@
     $('.statement-table').basictable();
    
     $('.statement-table tbody tr').click(function() {
-            var popUpWindow = document.getElementById("pop-up-window");
-    var popUpBackdrop = document.getElementById("pop-up-backdrop");
-    if ((popUpWindow.style.display === "none") && (popUpBackdrop.style.display === "none")) {
-        popUpWindow.style.display = "block";
-        popUpBackdrop.style.display = "block";
-    } else {
-        popUpWindow.style.display = "none";
-        popUpBackdrop.style.display = "none";
-    }
+        var popUpWindow = document.getElementById("pop-up-window");
+        var popUpBackdrop = document.getElementById("pop-up-backdrop");
+        if ((popUpWindow.style.display === "none") && (popUpBackdrop.style.display === "none")) {
+            popUpWindow.style.display = "block";
+            popUpBackdrop.style.display = "block";
+        } else {
+            popUpWindow.style.display = "none";
+            popUpBackdrop.style.display = "none";
+        }
+    });
+
+    $(function(){
+      $(".date-range").datepicker();
     });
   </script>
 </body>

@@ -132,7 +132,25 @@ function popUp() {
         popUpBackdrop.style.display = "none";
     }
 } 
+
+function confirmationPopUp() {
+   var popUp1 = $(".nol-pop-up1");
+   var popUp2 = $(".nol-pop-up2");
+
+   popUp1.hide();
+   popUp2.show();
+}  
+
+function hidePopUp() {
+  var popUpBackdrop = $("#pop-up-backdrop");
+  var popUp1 = $(".nol-pop-up1");
+  var popUp2 = $(".nol-pop-up2");
   
+  popUp1.hide();
+  popUp2.hide();
+  popUpBackdrop.hide();
+
+}
 
 
 $( "#accordion" ).accordion({
@@ -154,4 +172,12 @@ $('statement-table').click(function() {
     }  
 });
 
+// Popper.js
+var popupRef = $('.i-icon'); 
+var popup = $('#popup'); 
+popup.hide();
+
+popupRef.click(function(){
+  popup.show();
+});
 
