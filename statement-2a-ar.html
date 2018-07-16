@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js logged-in grid-aside-template grid-1-3 faq-page" dir="rtl" lang="ar">
+<html class="no-js logged-in grid-aside-template grid-1-2 statement-page" dir="rtl" lang="ar">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Frequently Asked Questions | RTA Nol Plus</title>
+  <title>Your Statement | RTA Nol Plus</title>
   <meta name="description" content="RTA Nol Plus Program">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -25,8 +25,9 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/vendor/basictable.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
@@ -96,11 +97,67 @@
   </div>
 
 
+ 
 
   <div class="wrapper wrapper-main">
     <div class="inner">      
         
+        <a href="#" id="pop-up-backdrop" class="pop-up-backdrop" tabindex="-1" aria-hidden="true" hidden onclick="popUp()"></a> 
+
         <main class="main-content">
+          <div id="pop-up-window" class="statement-pop-up">
+           
+            <div class="pop-up-inner clearfix">
+              <a href="#" class="pop-up-close" onclick="popUp()">X</a>
+              <h6 class="transaction-table-header"> تفاصيل المعاملة</h6>
+
+
+              <div class="transaction-table-wrapper">
+                <div class="transaction-table">
+                    <div>
+                      <div><strong> رقم المعاملة:</strong>&nbsp;<span>10920</span></div>
+                    </div>
+
+                    <div>
+                      <div><strong> التاريخ:</strong>&nbsp;<span>03/09/2018</span></div>
+                    </div>
+                </div>
+
+                <div class="transaction-table">
+                    <div>
+                      <div><strong>قيمة المعاملة:</strong>&nbsp;<span>7</span></div>
+                    </div>
+
+                    <div>
+                      <div><strong>نوع المعاملة:</strong>&nbsp;<span>اكتساب</span></div>
+                    </div>
+                </div>
+              </div> 
+
+              <div class="points-table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>في</th>
+                      <th>المكتسب</th>
+                      <th>النقاط</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dubai Metro</td>
+                      <td>Nol+ Points</td>
+                      <td>7pts</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+               
+            </div>
+
+          </div>
+
+          
 
           <section class="main-content__primary">
 
@@ -108,102 +165,53 @@
           <rect class="box3" x="7" y="14" width="7" height="7"></rect>
           <rect class="box2" x="0" y="7" width="7" height="7"></rect>
           <rect class="box1" x="7" y="0" width="7" height="7"></rect>
-  </svg>الأسئلة الأكثر تكراراً</h1>
+  </svg>   كشف النقاط</h1>
 
-            <div class="accordion">
-              <div class="accordionheader">
-                <h5>
-                  General<i class="fa fa-angle-down"></i></h5>
-              </div>
+             <h3 class="member-name">Francis Ventura</h3>
 
-              <div id="faq-question" class="faq-question">
+             <!-- <form class="date-filter" action="">
+               <fieldset>
+                 <legend>
+                   التاريخ
+                 </legend>
+                
+                  <fieldset class="date-filter-from" >
+                    <label for="">من:</label>
+                    <input class="date-range form-datepicker" type="text" placeholder="DD/MM/YYYY">
+                  </fieldset>
 
-                <div class="faq-question-header">
-                  <h5>Q: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fa fa-angle-down"></i></h5>
-                </div>
+                  <fieldset class="date-filter-to">
+                    <label for="">إلى:</label>
+                    <input class="date-range form-datepicker" type="text" placeholder="DD/MM/YYYY">
+                  </fieldset>
 
-                <div class="faq-answer">
-                  <p><span>A:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
+               </fieldset>
+             </form> -->
 
-                <div class="faq-question-header">
-                  <h5>Q: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fa fa-angle-down"></i></h5>
-                </div>
-
-                <div class="faq-answer">
-                  <p><span>A:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-
-              <div class="accordionheader">
-                <h5>
-                  Join the program<i class="fa fa-angle-down"></i></h5>
-              </div>
-
-              <div id="faq-question" class="faq-question">
-
-                <div class="faq-question-header">
-                  <h5>Q: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fa fa-angle-down"></i></h5>
-                </div>
-
-                <div class="faq-answer">
-                  <p><span>A:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-
-              <div class="accordionheader">
-                <h5>
-                  Earning and spending points <i class="fa fa-angle-down"></i></h5>
-              </div>
-
-              <div id="faq-question" class="faq-question">
-
-                <div class="faq-question-header">
-                  <h5>Q: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fa fa-angle-down"></i></h5>
-                </div>
-
-                <div class="faq-answer">
-                  <p><span>A:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-
-              <div class="accordionheader">
-                <h5>
-                  Voucher fraudulent and cancellation <i class="fa fa-angle-down"></i></h5>
-              </div>
-
-              <div id="faq-question" class="faq-question">
-
-                <div class="faq-question-header">
-                  <h5>Q: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fa fa-angle-down"></i></h5>
-                </div>
-
-                <div class="faq-answer">
-                  <p><span>A:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-
-              <div class="accordionheader">
-                <h5>
-                  Card lost or theft <i class="fa fa-angle-down"></i></h5>
-              </div>
-
-              <div id="faq-question" class="faq-question">
-
-                <div class="faq-question-header">
-                  <h5>Q: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<i class="fa fa-angle-down"></i></h5>
-                </div>
-
-                <div class="faq-answer">
-                  <p><span>A:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-
+             <div class="table-wrap">
+               <table class="statement-table tablesorter">
+                <thead>
+                  <tr>
+                    <th>الشهر</th>
+                    <th>التاريخ</th>
+                    <th>الوصف</th>
+                    <th>النشاط</th>
+                    <th>النقاط</th>
+                  </tr>
+                </thead>
+                <tbody>
+                   <tr class="earn"><td><a href="#">سبتمبر</a></td><td><a href="#">03/09/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">تعديل</a></td><td><a href="#">1000</a></td></tr>
+                   <tr class="redeem"><td><a href="#">أغسطس</a></td><td><a href="#">15/08/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">استبدال</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">يوليو</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">اكتساب</a></td><td><a href="#">20000</a></td></tr>
+                   <tr class="earn"><td><a href="#">تعديل</a></td><td><a href="#">23/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">اكتساب</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">يوليو</a></td><td><a href="#">16/07/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">اكتساب</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">يوليو</a></td><td><a href="#">04/07/2018</a></td><td><a href="#">Nol Card Payments</a></td><td><a href="#">اكتساب</a></td><td><a href="#">1000</a></td></tr>
+                   <tr class="redeem"><td><a href="#">يونيو</a></td><td><a href="#">29/06/2018</a></td><td><a href="#">Restaurant voucher</a></td><td><a href="#">استبدال</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">يونيو</a></td><td><a href="#">25/06/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">اكتساب</a></td><td><a href="#">4000</a></td></tr>
+                   <tr class="earn"><td><a href="#">يونيو</a></td><td><a href="#">16/06/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">اكتساب</a></td><td><a href="#">800</a></td></tr>
+                </tbody>
+              </table>
             </div>
-
-            
-
-
           </section><!-- .main-content__profile-details -->
           
           
@@ -214,9 +222,7 @@
               <div class="col">
                 <span>&nbsp;</span>
               </div>
-              <div class="col">
-                <span>&nbsp;</span>
-              </div>
+              
           </aside><!-- .main-content__profile-sub -->
 
         </main><!-- .main-content -->
@@ -229,7 +235,7 @@
   <div class="wrapper wrapper-footer">
     <div class="inner">
       <footer class="main-footer row">
-          <a class="main-footer__logo" href="https://www.rta.ae/wps/portal/rta/ae/home" title="Go back to RTA website">
+           <a class="main-footer__logo" href="#" title="Go back to home page">
               <img class="logo-fallback" src="img/src/rta-logo.png" alt="RTA Nol" style="width: 90px; height: auto;">
           </a><!-- .mast__logo -->
 
@@ -248,32 +254,46 @@
         </footer><!-- .main-footer -->
     </div><!-- .inner --> 
   </div><!-- .wrapper -->
- 
+
   
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
   <script src="js/vendor/jquery.responsive-dom.min.js"></script> 
   <script src="js/vendor/siema.min.js"></script> 
-  <script src="js/main.js"></script>   
+  <script src="js/vendor/jquery.basictable.min.js"></script> 
+  <script src="js/vendor/jquery.tablesorter.min.js"></script>
+  <!-- <script src="js/vendor/jquery.tablesorter.widgets.min.js"></script> -->
+  <script src="js/main.js"></script>
   <script>
-    $( ".accordion" ).accordion({
-      heightStyle: "content",
-      active:false,
-      collapsible: true,
-      header:"div.accordionheader"
-    }); 
+    $(function(){
+    $('.statement-table').tablesorter({
+      usNumberFormat : false,
+      sortReset      : true,
+      sortRestart    : true
+    });
+  });
 
-     $( ".faq-question" ).accordion({
-      heightStyle: "content",
-      active:false,
-      collapsible: true,
-      header:"div.faq-question-header"
-    });    
+    $('.statement-table').basictable();
+   
+    // $('.statement-table tbody tr').click(function() {
+    //     var popUpWindow = document.getElementById("pop-up-window");
+    //     var popUpBackdrop = document.getElementById("pop-up-backdrop");
+    //     if ((popUpWindow.style.display === "none") && (popUpBackdrop.style.display === "none")) {
+    //         popUpWindow.style.display = "block";
+    //         popUpBackdrop.style.display = "block";
+    //     } else {
+    //         popUpWindow.style.display = "none";
+    //         popUpBackdrop.style.display = "none";
+    //     }
+    // });
+
+    $(function(){
+      $(".date-range").datepicker();
+    });
   </script>
-
 </body>
 
 </html>
