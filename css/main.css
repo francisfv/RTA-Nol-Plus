@@ -1261,6 +1261,9 @@ input[type="text"]:required {
   }
   .hero__carousel__slide__heading {
     text-align: right;
+    margin-top: 4%;
+    width: 50%;
+    right: 0;
   }
 
   .main-content__hero__member-details {
