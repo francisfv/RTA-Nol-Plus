@@ -1100,16 +1100,17 @@ input[type="text"]:required {
 }
 
 .hero__carousel__slide__heading {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   color: #fff;
-  text-align: center;
+  text-align: right;
   width: 100%;
   position: absolute;
   top: 10%;
   padding-left: 5%;
   padding-right: 5%;
-  
+  width: 90%;
+  right: 0%;
 }
 
 .hero__carousel__slide__image {
@@ -1261,6 +1262,7 @@ input[type="text"]:required {
   }
   .hero__carousel__slide__heading {
     text-align: right;
+    font-size: 1.6rem;
     margin-top: 4%;
     width: 50%;
     right: 0;
