@@ -225,6 +225,12 @@ textarea {
   margin-top: 150px;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .wrapper-main {
+    margin-top: 123px;
+  }
+}
+
 .wrapper-main  main {
   position: relative;
 }
@@ -1325,30 +1331,431 @@ input[type="text"]:required {
    General Flex Grid styles 
    for landing page and home page
    ==================== */   
-  .main-content__gridbox.row {
-  overflow-x: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; 
-          -webkit-box-orient: horizontal; 
-          -webkit-box-direction: normal; 
-          -webkit-flex-flow: row wrap; 
-              -ms-flex-flow: row wrap; 
-                  flex-flow: row wrap;
+.main-content__gridbox.row {
+overflow-x: hidden;
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex; 
+        -webkit-box-orient: horizontal; 
+        -webkit-box-direction: normal; 
+        -webkit-flex-flow: row wrap; 
+            -ms-flex-flow: row wrap; 
+                flex-flow: row wrap;
 
-          -webkit-box-pack: center;
+        -webkit-box-pack: center;
 
-          -webkit-justify-content: center;
+        -webkit-justify-content: center;
 
-              -ms-flex-pack: center;
+            -ms-flex-pack: center;
 
-                  justify-content: center;
+                justify-content: center;
 }
 
 
+/*.main-content__gridbox > * {
+  display: block;
+      -webkit-box-shadow: inset 0px 0px 0px 1px #000000;  
+          box-shadow: inset 0px 0px 0px 1px #000000;
+}*/
+
 .main-content__gridbox .col {
-  /* Padding-bottom hack for .main-content gridboxes to maintain 1:1 aspect ratio*/
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  position: relative;
+}
+
+.main-content__gridbox .col {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  position: relative;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.main-content__gridbox .col > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-content__gridbox .col.partner-grid > div {
+  display: block;
+}
+
+.main-content__gridbox .col--wide {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;  
+
+}
+
+.main-content__gridbox .col--wide > div { 
+  position: absolute;
+  padding: 20% 5%;
+  min-height: auto;
+  top:40%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main-content__gridbox .col--wide > div > * {
+    text-align: center;
+  }
+
+.main-content__gridbox .col::after {
+  content: '';
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.main-content__gridbox .col--wide h6 {
+  font-size: 1rem;
+}
+
+.main-content__gridbox .col--wide::after {
+  padding-bottom: 50%;
+}
+
+.main-content__gridbox > a {
+  cursor: pointer;
+  display: block;
+}
+
+
+.partner-grid ul  {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.partner-grid ul li {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+
+.partner-grid ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content__gridbox .partner-grid > span {
+  padding: 0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .main-content__gridbox .col {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 25%;
+                -ms-flex: 0 0 25%;
+                    flex: 0 0 25%;
+  }
+
+  .main-content__gridbox .col--wide {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 50%;
+                -ms-flex: 0 0 50%;
+                    flex: 0 0 50%;
+  }
+
+  .main-content__gridbox .col--wide > div > * {
+    text-align: right;
+  }
+
+  .main-content__gridbox .col--wide h6 {
+    font-size: 1.5rem;
+  }
+}
+
+/* =====================================
+   Landing page styles
+   ===================================== */ 
+.landing-page .how-to .how-to-step {
+  display: block;
+  color: #fff;
+  font-size: 3.3em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+
+
+
+.landing-page .how-to > div{
+  padding: 5% 0;
+  margin-top: 3%;
+}
+
+.landing-page .how-to h6, .landing-page .how-to p  {
+  margin: 5% 10%;
+  text-align: center;
+}
+
+.landing-page .how-to h6 {
+  font-size: .8rem;
+}
+
+.landing-page .how-to p {
+  font-size: .7rem;
+}
+
+
+.landing-page .how-to-1 {
+  background-color: #228fff;
+}
+
+.landing-page .how-to-2 {
+  background-color: #ffd53f;
+}
+
+.landing-page .how-to-3 {
+  background-color: #ff6a8f;
+}
+
+.landing-page .how-to-1, .landing-page .how-to-3 {
+  color: #fff;
+}
+
+
+.landing-page .landing-col {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing-page .partner-featured > div > h6, .landing-page .partner-featured > div > p {
+  margin: 5% 10%;
+  text-align: center;
+  color: #fff;
+}
+
+.landing-page .partner-featured > div > h6 {
+  font-size: .8rem;
+}
+
+.landing-page .partner-featured > div > p {
+  font-size: .7rem;
+}
+
+
+
+.landing-page .partner-featured-2 > div > img {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.landing-page .partner-featured > div {
+  margin-top: 10%;
+}
+
+.landing-page .partner-featured-2 {
+  background-color: #005ea6;
+}
+
+
+
+@media screen and (min-width: 450px) {
+  .landing-page .how-to > div{
+    margin-top: 10%;
+  }
+
+  
+}
+
+@media screen and (min-width: 600px) {
+  .landing-page .how-to .how-to-step {
+    font-size: 5rem;
+  }
+  .landing-page .how-to h6 {
+    font-size: 1.1rem;
+  }
+
+  .landing-page .how-to p {
+    font-size: 1rem;
+  }
+
+  .landing-page .partner-featured > div > h6, .landing-page .partner-featured > div > p {
+    margin: 5% 10%;
+    text-align: center;
+    color: #fff;
+  }
+
+  .landing-page .partner-featured-2 > div > img {
+    width: 60px;
+  }
+
+  .landing-page .partner-featured > div > h6 {
+    font-size: 1.1rem;
+  }
+
+  .landing-page .partner-featured > div > p {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .landing-page .how-to h6, .landing-page .how-to p  {
+    text-align: right;
+  }
+
+  .landing-page .partner-featured > div > img {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    height: auto;
+    bottom: 10%;
+    left: 10%;
+  }
+
+  .landing-page .partner-featured > div > img {
+    width: 65px;
+  }
+
+  .landing-page .partner-featured > div > h6, .landing-page .partner-featured > div > p {
+    text-align: right;
+  }
+
+  .landing-page .how-to .how-to-step {
+    font-size: 4rem;
+  }
+  .landing-page .how-to h6 {
+    font-size: 1rem;
+  }
+
+  .landing-page .how-to p {
+    font-size: .8rem;
+  }
+
+  .landing-page .how-to > div{
+     margin-top: 0;
+  }
+
+  .landing-page .partner-featured > div {
+    margin-top: 0;
+  }
+
+  .landing-page .how-to .how-to-step {
+     position: absolute;
+     bottom: 5%;
+     left: 5%;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .landing-page .how-to .how-to-step {
+    font-size: 5rem;
+  }
+  .landing-page .how-to h6 {
+    font-size: 1.1rem;
+  }
+
+  .landing-page .how-to p {
+    font-size: .9rem;
+  }
+}
+
+/* =====================================
+   Home page styles
+   ===================================== */ 
+.home-page .main-content__gridbox .col--wide h6 {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+}
+
+.home-page .home-col-cta {
+  background-color: #228fff
+}
+
+.home-page .home-col-cta .cta-btn {
+  width: 85%;
+  display: inline-block;
+  margin-top: 40%;
+  font-size: .8rem;
+}
+
+.home-page .home-col-offer > div {
+  padding-top: 17%;
+}
+
+
+.home-page .home-col-offer h6 {
+  font-size: 1.3rem;
+}
+
+.home-page .home-col-offer p {
+  font-size: .9rem;
+}
+
+.home-page .home-col-offer > div > img {
+  width: 50px;
+  height: auto;
+}
+
+
+.home-page .home-col-offer {
+  -webkit-box-shadow: inset 0px 120px 100px rgba(0,0,0,0.3);
+          box-shadow: inset 0px 120px 100px rgba(0,0,0,0.3);
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: #fff;
+}
+
+
+
+.home-page .home-col-offer-1 {
+  background-image: url('../img/src/home/offer1.jpg');
+}
+
+.home-page .home-col-offer-2 {
+  background-image: url('../img/src/home/offer2.jpg');
+}
+
+
+@media screen and (min-width: 500px) {
+  .home-page .home-col-offer h6 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+
+
+  .home-page .home-col-cta .cta-btn {
+    width: 70%;
+    font-size: 1em;
+  }
+
+  .home-page .home-col-offer > div {
+    padding-top: 10%;
+  }
+
+  .home-page .home-col-offer > div > img {
+    position: absolute;
+    right: 5%;
+    bottom: 9%;
+  }
+
+}
+
+/*.main-content__gridbox .col {
   font-size: 1rem;
   display: block;
   -webkit-box-flex: 0;
@@ -1357,13 +1764,13 @@ input[type="text"]:required {
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   position: relative;
-  height: 0; /* (*) Firefox will have issues with this */
+  height: 0;
   padding-bottom: 50%; 
   overflow: hidden;   
-} 
+} */
 
 /* (*) This will fix the height issue above */
-@-moz-document url-prefix() {
+/*@-moz-document url-prefix() {
   .main-content__gridbox .col {
     height: auto;
     min-height: 260px;
@@ -1379,8 +1786,8 @@ input[type="text"]:required {
   }
 }
 
-
-.main-content__gridbox .grid-button {
+*/
+/*.main-content__gridbox .grid-button {
   background-color: #228fff;
 }
 
@@ -1404,11 +1811,11 @@ input[type="text"]:required {
   height:auto;
   overflow: hidden;   
   /*-webkit-box-shadow: inset 0px 0px 0px 2px #0300a5;  
-          box-shadow: inset 0px 0px 0px 2px #0300a5;*/
+          box-shadow: inset 0px 0px 0px 2px #0300a5;
 }
+*/
 
-
-.main-content__gridbox .col > span {
+/*.main-content__gridbox .col > span {
   display: block;
   font-size: 1rem;
   margin: 0 auto;
@@ -1468,9 +1875,9 @@ input[type="text"]:required {
 .main-content__gridbox .grid-bg {
   background-size: cover;
   background-repeat: no-repeat;  
-}
+}*/
 
-.main-content__gridbox .grid-bg.grid-bg-1 {
+/*.main-content__gridbox .grid-bg.grid-bg-1 {
   background-image: url('../img/src/photo/photo1.jpg');
 }
 
@@ -1484,12 +1891,12 @@ input[type="text"]:required {
 
 .main-content__gridbox .grid-bg.grid-bg-4 {
   background-image: url('../img/src/rta-pattern/rta-pattern-4.jpg');
-}
+}*/
 
 /*  
   How to open Nol Plus account section styles
 */
-.how-to__module.col {
+/*.how-to__module.col {
   color: #fff;
 }
 .how-to__module.col:nth-child(1n) {
@@ -1500,9 +1907,9 @@ input[type="text"]:required {
 }
 .how-to__module.col:nth-child(3n) {
   background-color: #ff6a8f;
-}
+}*/
 
-.how-to__module.col > span:before {
+/*.how-to__module.col > span:before {
   display: block;
   color: #fff;
   font-size: 3.3rem;
@@ -1524,9 +1931,9 @@ input[type="text"]:required {
 }
 .how-to__module.col:nth-child(3) > span:before {
   content: "3";
-}
+}*/
 
-.partner-grid ul  {
+/*.partner-grid ul  {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
@@ -1541,15 +1948,15 @@ input[type="text"]:required {
   -webkit-flex: 0 0 25%;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
-}
+}*/
 
-.partner-featured-detail {
+/*.partner-featured-detail {
   background-color: #005ea6;
   color: #fff;
   text-decoration: none;
-}
+}*/
 
-.partner-featured-detail > * {
+/*.partner-featured-detail > * {
   z-index: 2;
 }
 
@@ -1562,7 +1969,7 @@ input[type="text"]:required {
   height: auto;
   left: 0;
   bottom: -20px;
-}
+}*/
 
 /* This snippet is to make sure that the featured sub-partners grid appears last on mobile-first view  */
 /*.grid-bg-3,.partner-grid {
@@ -1571,7 +1978,7 @@ input[type="text"]:required {
   -webkit-order: 1;
           order: 1;
 }*/
-
+/*
 
   @media screen and (min-width: 450px) {
     .how-to__module.col > span:before {
@@ -1641,13 +2048,6 @@ input[type="text"]:required {
       left: 10%;
       bottom:10%;
     }
-    /* This will undo the featured partner grid flex position  */
-    /*.grid-bg-3, .partner-grid {
-      -ms-flex-order: 0;
-      -webkit-box-ordinal-group: 0;
-      -webkit-order: 0;
-              order: 0;
-    }*/
   }
 
   @media screen and (min-width: 900px) {
@@ -1672,20 +2072,18 @@ input[type="text"]:required {
     .how-to__module.col > span:before {
       font-size: 5.2rem;
     } 
-
-
-  }
+  }*/
 
 /* =====================================
    Home page styles
    ===================================== */
 
-.logged-in .partner-featured-detail {
+/*.logged-in .partner-featured-detail {
   -webkit-box-shadow: inset 0px 120px 100px rgba(0,0,0,0.3);
           box-shadow: inset 0px 120px 100px rgba(0,0,0,0.3);
-}
+}*/
 
-.logged-in .partner-featured-detail__logo.partner-featured-detail__logo.partner-featured-detail__logo {
+/*.logged-in .partner-featured-detail__logo.partner-featured-detail__logo.partner-featured-detail__logo {
   width: 30px;
 }   
 .logged-in .partner-featured-detail .partner-featured-detail__offer {
@@ -1699,8 +2097,8 @@ input[type="text"]:required {
 
 .home-page .grid-bg-2.grid-bg-2.grid-bg-2 {
   background-image: url('../img/src/home/pattern1');
-}
-
+}*/
+/*
 @media screen and (min-width: 450px) { 
   .logged-in .partner-featured-detail .partner-featured-detail__offer, .logged-in .partner-featured-detail .partner-featured-detail__info {
     text-align: center;
@@ -1718,7 +2116,7 @@ input[type="text"]:required {
     height: auto;
   } 
 }
-
+*/
 /*.logged-in .partner-featured-detail .partner-featured-detail__bg {
   position: relative;
   left: 0;
@@ -1728,7 +2126,7 @@ input[type="text"]:required {
   z-index: -1;
 }*/
 
-.logged-in .partner-featured-detail {
+/*.logged-in .partner-featured-detail {
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1742,7 +2140,7 @@ input[type="text"]:required {
 .logged-in .partner-featured-detail.partner-featured-detail-2 {
   background-image: url('../img/src/home/offer2.jpg');
 }
-
+*/
 
 /* =====================================
    Profile page styles
@@ -3723,6 +4121,51 @@ html[dir="rtl"].grid-aside-template .main-content {
   background-color: #fff;
 }
 
+.offers-static-page .main-content {
+  margin-top: 0 !important;
+  padding: 0!important;
+}
+
+.offers-static-page .main-content__profile-details, .offers-static-page .member-details-fixed {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.offers-static-page .offer-list {
+  padding-top: 11rem;
+}
+
+.offers-static-page .main-content__title {
+  margin-bottom: 1.5rem;
+}
+
+.offers-static-page .member-details-fixed {
+  position: fixed; 
+  background-color: #fff; 
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+@media (min-width: 750px) {
+  .offers-static-page .offer-list {
+    padding-top: 6.7rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  .offers-static-page .member-details-fixed {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+  }
+
+  .offers-static-page .offer-list {
+    padding-top: 9.7rem;
+  }
+}
 
 .offers-static-page .member-details {
   display: -webkit-box;
@@ -3738,7 +4181,6 @@ html[dir="rtl"].grid-aside-template .main-content {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-          margin-bottom: 1.5rem;
 }
 
 
@@ -3761,7 +4203,7 @@ html[dir="rtl"].grid-aside-template .main-content {
 }
 
 .offers-static-page .member-details__member-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 
@@ -3817,6 +4259,11 @@ html[dir="rtl"].grid-aside-template .main-content {
   margin-bottom: 1.25em;
 }
 
+/*.offers-static-page .offer-list {
+  padding-top: 14.5rem;
+}
+*/
+
 @media (min-width: 750px) {
   .offers-static-page .member-details__member-name,
   .offers-static-page .member-details__member-id, 
@@ -3827,8 +4274,10 @@ html[dir="rtl"].grid-aside-template .main-content {
             flex: 1 1 33.3%;
               margin-bottom: 0;
   }
+  
 
-
+  .offers-static-page .member-details {
+  }
 
   .offers-static-page .member-details__member-name {
     text-align: right;
@@ -3859,11 +4308,27 @@ html[dir="rtl"].grid-aside-template .main-content {
     max-height: 275px;
     padding: 2em 2em 0 2em;
   }  
+
+  /*.offers-static-page .offer-list {
+    padding-top: 8.5rem;
+  }*/
 }
 
 @media (min-width: 1040px) {
   html[dir="rtl"].offers-static-page .main-content {
-    padding-right: 11.5%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  html[dir="rtl"].offers-static-page .main-content .main-content__profile-details {
+    padding-right: 7.5rem;
+    padding-left: 0;
+  }
+
+  .offers-static-page .member-details-fixed {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-right: 7rem;
     padding-left: 0;
   }
 }
