@@ -27,7 +27,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/vendor/basictable.css">
   <link rel="stylesheet" href="css/main.css">
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/vendor/datatables.css"/>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
@@ -189,7 +190,7 @@
              </form>
 
              <div class="table-wrap">
-               <table class="statement-table tablesorter">
+               <table class="statement-table" id="statement-table">
                 <thead>
                   <tr>
                     <th>الشهر</th>
@@ -209,9 +210,31 @@
                    <tr class="redeem"><td><a href="#">يونيو</a></td><td><a href="#">29/06/2018</a></td><td><a href="#">Restaurant voucher</a></td><td><a href="#">استبدال</a></td><td><a href="#">800</a></td></tr>
                    <tr class="earn"><td><a href="#">يونيو</a></td><td><a href="#">25/06/2018</a></td><td><a href="#">RTA Smart Services</a></td><td><a href="#">اكتساب</a></td><td><a href="#">4000</a></td></tr>
                    <tr class="earn"><td><a href="#">يونيو</a></td><td><a href="#">16/06/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">اكتساب</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">يونيو</a></td><td><a href="#">16/06/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">اكتساب</a></td><td><a href="#">800</a></td></tr>
+                   <tr class="earn"><td><a href="#">يونيو</a></td><td><a href="#">16/06/2018</a></td><td><a href="#">Dubai Taxi</a></td><td><a href="#">اكتساب</a></td><td><a href="#">800</a></td></tr>
+
+                   
                 </tbody>
               </table>
             </div>
+
+             <!-- <div class="table-pagination">
+             <div class="table-pagination-inner row">
+
+                <div class="table-pagination-next"><a href="#"><i class="fa fa-angle-right"></i><span>سابق</span></a></div>
+
+                <div class="table-pagination-num">
+                  <a href="#">1</a>
+                  <a href="#" style="color: #aa28b7;">2</a>
+                  <a href="#">3</a>
+                  <span>&hellip;</span>
+                  <a href="#">5</a>
+                </div>
+                <div class="table-pagination-prev"><a href="#"><span>التالى</span><i class="fa fa-angle-left"></i></a></div>
+
+             </div>        
+            </div> -->
+            
           </section><!-- .main-content__profile-details -->
           
           
@@ -263,17 +286,27 @@
   <script src="js/vendor/jquery.responsive-dom.min.js"></script> 
   <script src="js/vendor/siema.min.js"></script> 
   <script src="js/vendor/jquery.basictable.min.js"></script> 
-  <script src="js/vendor/jquery.tablesorter.min.js"></script>
-  <!-- <script src="js/vendor/jquery.tablesorter.widgets.min.js"></script> -->
   <script src="js/main.js"></script>
+  <script src="js/vendor/datatables.js"></script>
+  
   <script>
-    $(function(){
-    $('.statement-table').tablesorter({
-      usNumberFormat : false,
-      sortReset      : true,
-      sortRestart    : true
-    });
-  });
+    $(document).ready(function() {
+        $('#statement-table').DataTable({
+          "lengthChange": false,
+          "searching": false,
+          "language": {
+            "paginate": {
+              "previous": "سابق",
+              "next": "التالى"
+            },
+            "lengthMenu": "Display _MENU_ records per page",
+            "zeroRecords": "Nothing found - sorry",
+            "info": "أظهر الصفحة _PAGES_ من _PAGE_",
+            "infoEmpty": "No records available",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+          }
+        });
+    } );
 
     $('.statement-table').basictable();
    
